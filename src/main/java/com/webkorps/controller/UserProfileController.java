@@ -39,7 +39,7 @@ public class UserProfileController {
 	public String userProfileSet(@ModelAttribute UserProfile userProfile,@RequestParam("userImage1") MultipartFile file ,HttpSession session) throws IOException 
 	{
 		 String userEmail  =(String) session.getAttribute("userEmail");
-	    this.userProfileService.setUserProfile(userProfile,userEmail,file,session);	
+	    this.userProfileService.setUserProfile(userProfile,userEmail,file);	
 	   
 		return  "User/userDashboard";
 	}

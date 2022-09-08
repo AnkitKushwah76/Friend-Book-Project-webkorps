@@ -30,9 +30,10 @@ public class UserProfileServiceImp  implements UserProfileService{
 	
 	
 	@Override
-	public  void setUserProfile(UserProfile userProfile,String userEmail,MultipartFile imageFile,HttpSession session) throws IOException 
+	public  void setUserProfile(UserProfile userProfile,String userEmail,MultipartFile imageFile) throws IOException 
 	{
 				
+		
 		ModelAndView model=new ModelAndView();	   
 		   String profilePhoto = "";
 			if (!imageFile.isEmpty()) {

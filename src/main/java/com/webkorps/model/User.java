@@ -1,5 +1,9 @@
 package com.webkorps.model;
 
+import java.util.ArrayList;
+
+import java.util.List;
+
 import javax.persistence.CascadeType;
 
 import javax.persistence.Column;
@@ -9,10 +13,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Columns;
+
+
 
 @Entity
 @Table(name="UserDetails")
@@ -36,13 +43,20 @@ public class User {
 
 	private UserProfile userProfile;
 	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "user")
+	private List<Followers>followers;
 	
 	
-	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "user")
+	private List<Followings>followings;
+
+
 	
 
+
+
 	public User(int userId, String fullName, String userEmail, String userPassword, String userName, String role,
-			UserProfile userProfile) {
+			UserProfile userProfile, List<Followers> followers, List<Followings> followings) {
 		super();
 		this.userId = userId;
 		this.fullName = fullName;
@@ -51,9 +65,11 @@ public class User {
 		this.userName = userName;
 		this.role = role;
 		this.userProfile = userProfile;
+		this.followers = followers;
+		this.followings = followings;
 	}
-	
-	
+
+
 
 	public User() {
 		super();
@@ -120,12 +136,34 @@ public class User {
 		this.userName = userName;
 	}
 
+
+
+	public List<Followers> getFollowers() {
+		return followers;
+	}
+
+
+
+	public void setFollowers(List<Followers> followers) {
+		this.followers = followers;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", fullName=" + fullName + ", userEmail=" + userEmail + ", userPassword="
-				+ userPassword + ", userName=" + userName + ", role=" + role + ", userProfile=" + userProfile + "]";
+				+ userPassword + ", userName=" + userName + ", role=" + role + ", userProfile=" + userProfile
+				+ ", followers=" + followers + ", followings=" + followings + "]";
 	}
 
+	
+
+
+
+	
+
+	
 	
 	
 

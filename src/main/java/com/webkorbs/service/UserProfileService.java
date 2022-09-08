@@ -11,7 +11,7 @@ import com.webkorps.model.UserProfile;
 
 public interface UserProfileService {
 
-	public void setUserProfile(UserProfile userProfile,String userEmail,MultipartFile imageFile,HttpSession session) throws FileNotFoundException, IOException;
+	public void setUserProfile(UserProfile userProfile,String userEmail,MultipartFile imageFile) throws FileNotFoundException, IOException;
 
 	
 }

@@ -15,7 +15,7 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-15">
-                        <form  enctype="multipart/form-data" id="login-form" class="form" action=userProfileSet method="post">
+                        <form  enctype="multipart/form-data" id="login-form" class="form" action=UpdateUserProfile method="post">
                             <h3 class="text-center text-info">Update-UserProfile</h3>
                             
                             

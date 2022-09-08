@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +24,7 @@
 
 <title >UserNavbar</title>
 <link href="view/css/style.css" rel="stylesheet" />
+
 </head>
 <body>
 	<!-- this is Navbar -->
@@ -49,7 +51,7 @@
 						<span class="sr-only">(current)</span>
 				</a></li>
            
-				<li class="nav-item active"><a class="nav-link" ><%=userName%>
+				<li class="nav-item active"><a class="nav-link" ><span>UserName:-</span><%=userName%>
 						<span class="sr-only">(current)</span>
 				</a></li>
 
@@ -61,6 +63,11 @@
 
 				<!-- <li class="nav-item"><a class="nav-link " href="logout"
 					tabindex="-1" aria-disabled="true">Logout</a></li> -->
+					<!-- 
+					   <form id="search" action="searchdata" method="post"><input  type="search" name="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></form>  -->
+    
+					   <input  type="search" name="search"  onkeyup="mySearch()" id="search" placeholder="Search" aria-label="Search">
 					
 			<li class="nav-item"> <a data-toggle ="modal"
 		data-target="#exampleModal" class="nav-link ">Logout</a></li>
@@ -78,9 +85,10 @@
 	<div class="sidebar mt-2">
 
       <span onclick="toggleSidebar()" class="crossBtn">&times;</span>
-		<a href="#"  class="item"><i class="fa-solid fa-house"> </i>Home</a> 
-		<a href="#"  class="item"><i class="fas fa-id-card-alt"></i> ViewContacts</a>
-			 <a href="#"   class="item"><i class="fas fa-pencil-alt"></i> Add Contacts</a>
+		<a href="/"  class="item"><i class="fa-solid fa-house"> </i>Home</a> 
+		<a href="#"  class="item"><i class="fas fa-id-card-alt"></i> ViewPost</a>
+		
+			 <!-- <a href="#"   class="item"><i class="fas fa-pencil-alt"></i> Add Contacts</a> -->
 			  <a href="showUserProfile" class="item"><i class="fas fa-user-circle"> </i>Your Profile</a> 
 			  <a href="#" class="item"><i class="fas fa-cogs"></i> Settings</a>
 			   <!-- <a href="#" href="logout" class="item"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -121,23 +129,13 @@
 	<!--  end content area -->
 
 
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
-
-
-	<script src="/view/js/script.js"></script>
+    <div class="card col-lg-2 offset-lg-9 fixed-top mt-5" id="box" style="display:none;">
+		<table class="table">
+			<tbody id="searchbox">
+			</tbody>
+		</table>
+	</div>
+    
 	
 	
 	
@@ -167,6 +165,30 @@
 		</div>
 	</div>
 	<!-- logout popup -->
+	
+    
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+		<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+		integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/view/js/script.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+
+	
+	
 	
 </body>
 </html>
