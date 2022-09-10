@@ -38,7 +38,7 @@ function mySearch() {
 			console.log(result[i].userName);
 /*$('#searchbox').append('<tr class="rex"><td><a href="/searchdata?search='+result[i].userName+'"><img height="30" width="30" style="border-radius:100px" src="../view/userProfileImg/'+result[i].profilephoto+'"/>   '+ result[i].userName + '</a></td></tr>');
 */
-	$('#searchbox').append('<tr class="rex"><td><a href="/searchdata?search='+result[i].userName+'">'+ result[i].userName + '</a></td></tr>');
+	$('#searchbox').append('<tr class="rex"><td><a href="/searchdata?search='+result[i].userName+'"><img height="30" width="30" style="border-radius:100px" src=""../view/userProfileImg/'+result[i].userImage+'"/> '+ result[i].userName + '</a></td></tr>');
 			}
 		},
 	    error:function(result){

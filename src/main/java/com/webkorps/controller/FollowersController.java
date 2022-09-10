@@ -1,4 +1,4 @@
-package com.webkorps.controller;
+/*package com.webkorps.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -22,12 +22,12 @@ public class FollowersController {
 	public String followes(@ModelAttribute("id") String id,HttpSession session) {
 		
 		Integer userId=(Integer)session.getAttribute("userId");
+		String followUserId=String.valueOf(userId);
 		System.out.println("userId--->"+userId);
 		System.out.println("followers-->"+id);
-		Notification setNotificationData = this.notificationService.setNotificationData(userId, id);
-		
-		
-		
-		return null;
+		Notification setNotificationData = this.notificationService.setNotificationData(followUserId, id);
+		System.out.println("setNotificationData-->"+setNotificationData);
+		return "User/userDashboard";
 	}
 }
+*/

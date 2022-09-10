@@ -17,36 +17,15 @@
 				<div class="col-md-6 offset-md-3">
 
 					<div class="my-card mt-5">
-						<%-- <div th:if="${session.message}"
-							th:classappend="${session.message.type}" class="alert "
-							role="alert">
-							<p th:text="${session.message.content}"></p>
-							<th:block th:text="${#session.removeAttribute('message')}"></th:block>
-
-						</div>
-  --%>
-                           <%
-                             String  success=(String)session.getAttribute("sucessfull");
-                           if(success !=null)
-                           {%>
-                           <h4 class="text-center text-success">
-           							<%=success%>
-           						</h4>
-           						<%
-                           	session.removeAttribute("sucessfull");
-                           }
-                           
-                           %>
-                           
-                           
+						     
 						<div class="contatiner text-center">
 							<img style="width: 80px;" src="/view/img/membership.png" />
 						</div>
 
 						<h1 class="text-center">Signup Here !!</h1>
 
-
-						<form id="register" action="register" method="post">
+                            <h2 class="text-center text-success">${sucessfull}</h2>
+						<form action="/register" method="post">
 
 							<!--  name-field -->
 

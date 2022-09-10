@@ -1,11 +1,11 @@
 package com.webkorbs.service;
 
-import java.util.List;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.ui.Model;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.webkorps.model.User;
 
@@ -14,7 +14,13 @@ public interface UserService {
 	
 	public User userSignup(User user);
 	
-	public String userLogin(User user,Model model,HttpSession session);
+	public  String  userLogin(User user,HttpServletRequest request);
+	
+		
+		public void setUserProfile(User user,String userName, MultipartFile imageFile) throws FileNotFoundException, IOException;
+
+		
+
 	
 	
 

@@ -20,24 +20,7 @@
                             <div class="alert alert-danger">
                              ${error}
                             </div>
-                            <%
-                             String  logout=(String)session.getAttribute("logout");
-                           if(logout !=null)
-                           {%>
-                          
-           						<div class="alert alert-danger">
-                            <%=logout%>
-                            </div>
-           						<%
-                           	session.removeAttribute("logout");
-                           }
-                           
-                           %>
-                            <!-- <div if="param.logout" class="alert alert-danger">
-                             You have been  logged out
-                            </div> --> 
-                            
-                            
+                             ${logout}
                             <div class="form-group">
                                 <label for="username" class="text-info">Email:</label><br>
                                 <input type="text" name="userEmail" id="username" class="form-control" placeholder="Enter Email Address">
@@ -49,7 +32,8 @@
                             </div>
                              <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+<!--                                 <input  name="submit"  value="submit"> -->
+                                <button type="submit" class="btn btn-info btn-md">submit</button>
                             </div>
                             
                                 <div id="register-link" class="text-right">

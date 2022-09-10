@@ -15,6 +15,8 @@ public class Notification {
 	String sendRequest;
 	String isAccept;
 	String isFollow;
+	String status;
+	
 	public int getNid() {
 		return Nid;
 	}
@@ -45,11 +47,18 @@ public class Notification {
 	public void setIsFollow(String isFollow) {
 		this.isFollow = isFollow;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	@Override
 	public String toString() {
 		return "Notification [Nid=" + Nid + ", acceptRequest=" + acceptRequest + ", sendRequest=" + sendRequest
-				+ ", isAccept=" + isAccept + ", isFollow=" + isFollow + "]";
+				+ ", isAccept=" + isAccept + ", isFollow=" + isFollow + ", status=" + status + "]";
 	}
+	
 	
 	
 	

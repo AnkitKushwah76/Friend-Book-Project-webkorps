@@ -21,6 +21,7 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
 	<link href="/view/css/style.css" rel="stylesheet" type="text/css">
+	
 
 <title >UserNavbar</title>
 <link href="view/css/style.css" rel="stylesheet" />
@@ -36,7 +37,8 @@
 
 	<nav class=" fixed-top navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="#">Friend-Book </a>
-
+		 
+		
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -47,7 +49,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto text-uppercase">
 
-           <li class="nav-item active"><a class="nav-link" href="/">Home
+           <li class="nav-item active"><a class="nav-link" href="/" >Home
 						<span class="sr-only">(current)</span>
 				</a></li>
            
@@ -59,13 +61,6 @@
 				<li class="nav-item"><a class="nav-link " href="#"
 					tabindex="-1" aria-disabled="true"> <span
 					      ></span></a></li>
-
-
-				<!-- <li class="nav-item"><a class="nav-link " href="logout"
-					tabindex="-1" aria-disabled="true">Logout</a></li> -->
-					<!-- 
-					   <form id="search" action="searchdata" method="post"><input  type="search" name="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></form>  -->
     
 					   <input  type="search" name="search"  onkeyup="mySearch()" id="search" placeholder="Search" aria-label="Search">
 					
@@ -96,6 +91,11 @@
 			   <a data-toggle ="modal"
 		data-target="#exampleModal" class="item"><i class="fas fa-sign-out-alt"></i>Logout</a>
 		
+			   <a  href="/friendRequest" class="item"><i class="fas fa-sign-out-alt"></i>FriendRequest</a>
+		
+		
+		
+			  
 		<div class="divider"></div>
 	</div>
 	<!-- end sidebar -->
@@ -106,17 +106,7 @@
 	<div class="content mt-5">
 	<i onclick="toggleSidebar()" class="fas fa-bars m-3"> </i>
 	
-	  <!--  message box -->
-	  
-	  
-	  <%-- <div  th:if="${session.message}" class="container">
-	  <div th:classappend="${'alert-'+session.message.type}"  class="alert text-center"  role="alert">
-         
-       <span th:text="${session.message.content}"></span> 
-       
-    </div>
-    <th:block th:text="${#session.removeAttribute('message')}"></th:block>
-    </div> --%>
+	 
     
    <!--  end message box -->
    
@@ -136,6 +126,7 @@
 		</table>
 	</div>
     
+	
 	
 	
 	
@@ -164,8 +155,23 @@
 			</div>
 		</div>
 	</div>
-	<!-- logout popup -->
 	
+		
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -186,9 +192,6 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 
-
-	
-	
 	
 </body>
 </html>

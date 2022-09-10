@@ -7,12 +7,17 @@
 <title>Home Page</title>
 <%@include file="/view/Navbar/base.jsp" %>
 
+
 </head>
 <body>
 <section class="banner  d-flex justify-content-center align-items-center	"> 
    <div class="text-center">
 	<h1 class="font-weight-bold">Friend-Book</h1>
 	<button class="btn bg-primary btn-lg text-white">Get Start</button>
+	</div>
+	</section>
+	
+
 </body>
 </html>
 
