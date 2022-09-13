@@ -44,18 +44,16 @@ public class LoginController {
 			model.addAttribute("sucessfully","Login SucessFully !! ");
 			return "setUserProfile";
 		}
-		if(userLogin.equals("second")) {
+		else if(userLogin.equals("second"))
+				{
+			return "userDashboard";
+				}
+		else {
 			 model.addAttribute("error", "Invalid username and Password");
-			return "login";
+			 return "login";
 		}
-		 //else if(userLogin.equals("error")) {
-		  // model.addAttribute("error", "Invalid username and Password");
-		//}
-		return"login";
 		
-		
-		
-
+	
 	}
 	
 	//logout api...

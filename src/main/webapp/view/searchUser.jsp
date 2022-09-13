@@ -46,19 +46,14 @@
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-4">
-				   <% 
-				   boolean  f=true;
-				   if(f){
-				   %>
-					<a href="/followes?id=${searchUserId.getId()}"><button value=" " class="btn profile-edit-btn" style= "background-color:#008CBA">Follow</button></a>
+				   
+					<a href="/followrequest?id=${searchUserId.getId()}"><button value=" " class="btn profile-edit-btn" style= "background-color:#008CBA">Follow</button></a>
 					
-					<%f=false; %>
+					
 					</div>
-					<%}
-				   else{
-					   %>
-					   <h1>hello</h1>
-				   <%}%>
+					   
+					   
+				   
 				   
 				   
 					

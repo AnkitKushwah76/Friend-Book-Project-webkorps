@@ -12,7 +12,7 @@
 <body>
 <section class="banner  d-flex justify-content-center align-items-center	"> 
    <div class="text-center">
-	<h1 class="font-weight-bold">Friend-Book</h1>
+	<h1 class="font-weight-bold">welcome</h1>
 	<button class="btn bg-primary btn-lg text-white">Get Start</button>
 	</div>
 	</section>

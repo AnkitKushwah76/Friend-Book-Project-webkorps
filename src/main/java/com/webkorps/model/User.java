@@ -45,13 +45,10 @@ public class User {
 	private boolean  status;
 
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "user")
-	private List<Followers>followers;
 	
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "user")
-	private List<Followings>followings;
-
+	
+	
 
 	public int getId() {
 		return id;
@@ -124,21 +121,7 @@ public class User {
 		this.favoritePlaces = favoritePlaces;
 	}
 
-	public List<Followers> getFollowers() {
-		return followers;
-	}
-
-	public void setFollowers(List<Followers> followers) {
-		this.followers = followers;
-	}
-
-	public List<Followings> getFollowings() {
-		return followings;
-	}
-
-	public void setFollowings(List<Followings> followings) {
-		this.followings = followings;
-	}
+	
 
 
 
@@ -161,9 +144,12 @@ public class User {
 		return "User [id=" + id + ", fullName=" + fullName + ", userEmail=" + userEmail + ", userPassword="
 				+ userPassword + ", userName=" + userName + ", userImage=" + userImage + ", favoriteSongs="
 				+ favoriteSongs + ", favoriteBooks=" + favoriteBooks + ", favoritePlaces=" + favoritePlaces
-				+ ", status=" + status + ", followers=" + followers + ", followings=" + followings + "]";
+				+ ", status=" + status + "]";
 	}
 
+
+
+	
 
 
 	

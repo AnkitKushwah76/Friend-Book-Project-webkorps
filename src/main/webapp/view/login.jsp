@@ -8,7 +8,7 @@
 <%@include file="/view/Navbar/base.jsp" %>
 </head>
 <body>
-   <section>
+   
 	 <div id="login">
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
@@ -32,7 +32,7 @@
                             </div>
                              <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-<!--                                 <input  name="submit"  value="submit"> -->
+
                                 <button type="submit" class="btn btn-info btn-md">submit</button>
                             </div>
                             
@@ -45,6 +45,6 @@
             </div>
         </div>
     </div>
-    </section>
+    
 </body>
 </html>

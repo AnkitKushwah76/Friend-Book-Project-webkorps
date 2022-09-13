@@ -1,13 +1,19 @@
-/*package com.webkorbs.service;
+package com.webkorbs.service;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-import com.webkorps.model.Notification;
+
+
+import com.webkorps.model.Notifications;
+
+
 
 public interface NotificationService {
-	
-	public Notification setNotificationData(String id,String userId);
 
-	
+	// add follow request
+	public String addRequest(int userId, int sesssionUserId);
+
+	// get all request
+	public List<Notifications> getRequest(int id);
+
 }
-*/
