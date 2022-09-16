@@ -81,10 +81,12 @@
 
       <span onclick="toggleSidebar()" class="crossBtn">&times;</span>
 		<a href="userDashboard"  class="item"><i class="fa-solid fa-house"> </i>Home</a> 
-		<a href="#"  class="item"><i class="fas fa-id-card-alt"></i> ViewPost</a>
+		<a href="showAllFollowersPost"  class="item"><i class="fas fa-id-card-alt"></i> ViewPost</a>
 		
 			 <!-- <a href="#"   class="item"><i class="fas fa-pencil-alt"></i> Add Contacts</a> -->
+			 
 			  <a href="showUserProfile" class="item"><i class="fas fa-user-circle"> </i>Your Profile</a> 
+			  
 			  <a href="addpost" class="item"><i class="fa-solid fa-folder-plus"></i> AddPost</a>
 			   <!-- <a href="#" href="logout" class="item"><i class="fas fa-sign-out-alt"></i> Logout</a>
 			    -->

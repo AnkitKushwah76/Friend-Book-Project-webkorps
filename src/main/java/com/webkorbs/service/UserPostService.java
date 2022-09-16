@@ -2,10 +2,12 @@ package com.webkorbs.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.webkorps.model.UserPost;
 
+@Component
 public interface UserPostService {
    
 	// this method use for add post...

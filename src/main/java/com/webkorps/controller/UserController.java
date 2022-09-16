@@ -2,10 +2,7 @@ package com.webkorps.controller;
 
 
 import java.io.FileNotFoundException;
-
-
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +25,7 @@ import com.webkorbs.service.UserPostService;
 import com.webkorbs.service.UserService;
 import com.webkorps.Repository.UserRepository;
 import com.webkorps.model.User;
-import com.webkorps.model.UserPost;
+import com.webkorps.model.UserFollowers;
 import com.webkorps.serviceImpl.UserPostServiceImp;
 import com.webkorps.serviceImpl.UserServiceImp;
 
@@ -89,6 +86,8 @@ public class UserController {
 		User user = findById.get();
 		UserProfileDto userprofileDto = this.userServiceImp.getProfile((int) session.getAttribute("userId"));
 		System.out.println("profile--->anku" + userprofileDto);
+		List<UserFollowers> userFollowers = userprofileDto.getUserFollowers();
+		System.out.println("userFollowers--78787-"+userFollowers);
 		
 		modelAndView.addObject("userprofileDto", userprofileDto);
 		modelAndView.addObject("findByUser", user);

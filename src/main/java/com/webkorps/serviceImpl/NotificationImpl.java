@@ -1,24 +1,17 @@
 package com.webkorps.serviceImpl;
 
-
 import java.util.List;
-
-
-import javax.management.Notification;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import com.webkorbs.service.NotificationService;
-
 import com.webkorps.Repository.NotificationsRepository;
 import com.webkorps.model.Following;
 import com.webkorps.model.Notifications;
-
 import com.webkorps.model.User;
-import com.webkorps.model.UserFollower;
+import com.webkorps.model.UserFollowers;
 
 @Service
 public class NotificationImpl implements NotificationService {
@@ -55,18 +48,18 @@ public class NotificationImpl implements NotificationService {
 		boolean follow = false;
 		return this.notificationsRepository.findByUserId(id, accept, follow);
 	}
-	
-	public Notifications getFollowerRequest(int userId,int acceptUser){
-		return this.notificationsRepository.findByUserIdAndAccepted(userId,acceptUser);
+
+	public Notifications getFollowerRequest(int userId, int acceptUser) {
+		return this.notificationsRepository.findByUserIdAndAccepted(userId, acceptUser);
 	}
-	
+
 	// accept request
 	@Transactional
 	public int accept(int acceptUser, int userId) {
 		boolean a = true;
 
 		if (this.notificationsRepository.updateAcceptRequest(a, acceptUser, userId) > 0) {
-			UserFollower userFollower = new UserFollower();
+			UserFollowers userFollower = new UserFollowers();
 			User user = new User();
 			user.setId(userId);
 			userFollower.setFollower(user);
@@ -79,7 +72,6 @@ public class NotificationImpl implements NotificationService {
 			following.setFollowing(user1);
 			following.setUser_id(userId);
 
-			
 			if (this.followingServiceImpl.addfollowing(following) != null
 					&& this.userFollowerServiceImp.addFollower(userFollower) != null)
 				return 1;
@@ -87,29 +79,27 @@ public class NotificationImpl implements NotificationService {
 
 		return 0;
 	}
-	
-	
-	//followBack...
+
+	// followBack...
 	@Transactional
-	public boolean followBack(int acceptedUser,int userId) {
-		
-		
-		System.out.println("accceptedUser-->"+acceptedUser);
-		System.out.println("userid--->"+userId);
-		if(this.notificationsRepository.followBack(acceptedUser, userId)>0) {
-			
-			Notifications notification= new Notifications();
-			User user=new User();
-		     user.setId(acceptedUser);
+	public boolean followBack(int acceptedUser, int userId) {
+
+		System.out.println("accceptedUser-->" + acceptedUser);
+		System.out.println("userid--->" + userId);
+		if (this.notificationsRepository.followBack(acceptedUser, userId) > 0) {
+
+			Notifications notification = new Notifications();
+			User user = new User();
+			user.setId(acceptedUser);
 			notification.setAccept(false);
 			notification.setFollowBack(true);
 			notification.setSendUserRequest(user);
 			notification.setAcceptUser(userId);
-			if(this.notificationsRepository.save(notification)!=null)
+			if (this.notificationsRepository.save(notification) != null)
 				return true;
-				
+
 		}
-		
+
 		return false;
 	}
 

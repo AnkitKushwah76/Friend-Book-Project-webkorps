@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -18,10 +20,12 @@ import org.springframework.web.multipart.MultipartFile;
 import com.webkorbs.dto.UserProfileDto;
 import com.webkorbs.service.UserPostService;
 import com.webkorbs.service.UserService;
+import com.webkorps.Repository.UserFollowerRepository;
 //import com.webkorps.Repository.UserProfileRepository;
 import com.webkorps.Repository.UserRepository;
 import com.webkorps.model.Following;
 import com.webkorps.model.User;
+import com.webkorps.model.UserFollowers;
 import com.webkorps.model.UserPost;
 
 @Service
@@ -38,9 +42,6 @@ public class UserServiceImp implements UserService {
 
 	@Autowired
 	private UserPostService userPostService;
-	
-	@Autowired
-	private UserPostServiceImp userPostServiceImp;
 
 	// set UserSignup ServiceImp
 	@Override
@@ -64,38 +65,32 @@ public class UserServiceImp implements UserService {
 	}
 
 	// set UserLogin ServiceImp
-	
+
 	@Transactional
 	public String userLogin(User user, HttpServletRequest request) {
-          
-		
+
 		HttpSession session = request.getSession();
-		System.out.println("user0000"+user);
+		System.out.println("user0000" + user);
 		User user1 = this.userRepository.findByUserEmailAndUserPassword(user.getUserEmail(), user.getUserPassword());
 		System.out.println("user1--44454-->" + user1);
-		
-		  
-		 
-		if(user1 !=null)
-		{	
+
+		if (user1 != null) {
 			session.setAttribute("userId", user1.getId());
-			  session.setAttribute("userName", user1.getUserName());
-			  session.setAttribute("userEmail", user1.getUserEmail());
-			  
+			session.setAttribute("userName", user1.getUserName());
+			session.setAttribute("userEmail", user1.getUserEmail());
+
 			System.out.println();
 			if (user1.isStatus() == true) {
 				int i = (int) session.getAttribute("userId");
 				System.out.println("i-->" + i);
-				 this.userRepository.updateById((int) session.getAttribute("userId"));
+				this.userRepository.updateById((int) session.getAttribute("userId"));
 				return "first";
 			} else {
-	
+
 				return "second";
 			}
-		}
-		else 
-		{
-			
+		} else {
+
 			return "error";
 		}
 
@@ -148,20 +143,26 @@ public class UserServiceImp implements UserService {
 		userProfileDto.setCountPost(this.userPostService.countPost(userId));
 		List<UserPost> getAllPost = userProfileDto.getGetAllPost();
 		System.out.println("getAllPost-->" + getAllPost);
-		
+
 		// get all following in particular...User..
 		List<Following> allFollwing = followingServiceImpl.getAllFollwing(userId);
-//		    for(int i=0;i<allFollwing.size();i++)
-//		    {
-//		    	  allFollwing.get(i).getFollowing().getFullName();
-//		    	  System.out.println(" allFollwing.get(i).getFollowing().getFullName()-->;"+ allFollwing.get(i).getFollowing().getFullName());
-//		    }
-		    userProfileDto.setUserFollowing(allFollwing);
-		    
-		System.out.println("allFollwing--->"+allFollwing);
+		System.out.println("allFollwing--->" + allFollwing);
+		userProfileDto.setUserFollowing(allFollwing);
 
-		
-		
+		// get all followers in particular User...
+		List<UserFollowers> allFollower = userFollowerServiceImp.getAllFollower(userId);
+		System.out.println("allFollower 7649008047-->" + allFollower);
+
+		// get all post in all followers....
+		List<UserPost> followersPost = new ArrayList<UserPost>();
+		for (int i = 0; i < allFollower.size(); i++) {
+
+			followersPost.addAll(this.userPostService.getPost(allFollower.get(i).getFollower().getId()));
+		}
+          userProfileDto.setGetAllFollowerPost(followersPost);
+          System.out.println("post1--->"+followersPost);
+		userProfileDto.setUserFollowers(userFollowerServiceImp.getAllFollower(userId));
 		return userProfileDto;
 	}
+
 }

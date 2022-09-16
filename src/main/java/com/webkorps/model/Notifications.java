@@ -1,6 +1,5 @@
 package com.webkorps.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +13,6 @@ import javax.persistence.Table;
 public class Notifications {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	
 	private int id;
 	
 	private int acceptUser;
@@ -25,9 +23,6 @@ public class Notifications {
 	
 	private boolean accept;
 	private boolean followBack;
-
-	
-
 	@Override
 	public String toString() {
 		return "Follower [id=" + id + ", acceptUser=" + acceptUser + ", sendUserRequest=" + sendUserRequest

@@ -1,6 +1,5 @@
 package com.webkorps.Repository;
 
-import java.beans.Transient;
 import java.util.List;
 
 //import java.util.List;

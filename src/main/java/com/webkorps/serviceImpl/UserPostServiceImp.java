@@ -1,8 +1,6 @@
 package com.webkorps.serviceImpl;
 
 import java.io.FileOutputStream;
-
-
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +17,7 @@ import com.webkorps.model.UserPost;
 @Service
 public class UserPostServiceImp implements UserPostService {
 
-	@Autowired
-	private UserPostRepository userPostRepository;
+	@Autowired private UserPostRepository userPostRepository;
 	
 	
 	// this method use for add post
@@ -64,7 +61,7 @@ public class UserPostServiceImp implements UserPostService {
 			}
 			
 			
-			//get all posts of our all followersUser
+			//get all post in followers
 			public List<UserPost> getAllPost(Integer usersId){
 				ArrayList<UserPost> user=new ArrayList<UserPost>();
 				ArrayList<Integer> usersd=new ArrayList<Integer>(usersId);

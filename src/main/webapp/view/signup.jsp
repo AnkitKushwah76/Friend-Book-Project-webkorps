@@ -7,12 +7,15 @@
 <title>signup page</title>
 <link href="/view/css/style.css" rel="stylesheet" type="text/css">
 <%@include file="/view/Navbar/base.jsp"%>
+<link href="/view/css/a.css" rel="stylesheet" type="text/css">
+
+
 
 
 </head>
 <body>
 	<section>
-		<div class="container">
+		 <div class="container">
 			<div class="row">
 				<div class="col-md-6 offset-md-3">
 
@@ -24,10 +27,12 @@
 
 						<h1 class="text-center">Signup Here !!</h1>
 
+						<span id="errMsg"></span>
                             <h2 class="text-center text-success">${sucessfull}</h2>
-						<form action="/register" method="post">
+						<form   name="form1"action="/register" method="post" onsubmit="return checkCaptcha()">
 
 							<!--  name-field -->
+						
 
 							<div class="form-group">
 								<label for="name_field">Your Name</label> <input type="text"
@@ -56,10 +61,24 @@
 									id="password_field" aria-describedby="emailHelp"
 									placeholder="Enter password" required>
 
-							</div>
+							
+ 			
+										
+										<div class="container">
+			  
+			    <input type="text" id="captchaTxtArea" name="text" value=""><br/>
+			    <input type="text" id="CaptchaEnter" placeholder="Enter The Captcha Code"><br/>
+			    <input type="button" value="REFRESH" id="refreshbtn" onclick="genNewCaptcha()">
+			    
+			
+			 
+			         </div>
+
+										
 
 							<div class="container text-center">
-								<button type="submit" class="btn bg-primary  text-white">Submit</button>
+							
+								<button type="submit" class="btn bg-primary  text-white" >Submit</button>
 								<button type="reset" class="btn btn-warning  ">Reset</button>
 							</div>
 
@@ -72,5 +91,35 @@
 
 		</div>
 	</section>
+
+
+<script type="text/javascript">
+  var captcha, chars;
+
+  function genNewCaptcha(){
+    chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    captcha = chars[Math.floor(Math.random() * chars.length )];
+    for(var i=0; i<6; i++){
+      captcha = captcha + chars[Math.floor(Math.random() * chars.length )];
+    }
+    form1.text.value = captcha;
+  }
+
+  function checkCaptcha(){
+    var check = document.getElementById("CaptchaEnter").value;
+    if(captcha == check){
+      //alert("Valid Captcha!!! Success");
+      return true;
+      //document.getElementById("CaptchaEnter").value = "";
+    }else{
+     // alert("InValid Captcha!!! Please Try Again");
+     document.getElementById("errMsg").innerHTML="Invalid captcha";
+      return false;
+      //document.getElementById("CaptchaEnter").value = "";
+    }
+
+    genNewCaptcha();
+  }
+</script>
 </body>
 </html>

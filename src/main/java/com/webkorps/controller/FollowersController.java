@@ -2,6 +2,7 @@
 package com.webkorps.controller;
 
 import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,7 +74,7 @@ public class FollowersController {
 		//System.out.println("followBack-->"+followBack);
 		
 		if(!this.notificationImpl.followBack((int) session.getAttribute("userId"),userId))
-			session.setAttribute("followback","followback...");
+			//session.setAttribute("followback","followback...");
 		redirecatView.setUrl("checkUserRequest");
 		
 		return redirecatView;

@@ -4,7 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -19,8 +18,7 @@ import com.webkorps.model.UserPost;
 @Controller
 public class AddPostController {
 
-	@Autowired
-	private UserPostService userPostService;
+	@Autowired private UserPostService userPostService;
 
 	@GetMapping("/addpost")
 	public ModelAndView addPost() {

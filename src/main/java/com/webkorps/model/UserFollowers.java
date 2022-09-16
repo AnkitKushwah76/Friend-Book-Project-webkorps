@@ -1,6 +1,7 @@
 package com.webkorps.model;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,10 +13,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="userfollowers")
-public class UserFollower {
+public class UserFollowers {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="userfollower_id")
+	@Column(name="userfollowers_id")
 	private int id;
 	
 	private int user_id;
@@ -23,11 +25,6 @@ public class UserFollower {
 	@OneToOne
 	@JoinColumn(name="follower")
 	private User follower;
-
-	@Override
-	public String toString() {
-		return "RealFollower [id=" + id + ", user_id=" + user_id + ", follower=" + follower + "]";
-	}
 
 	public int getId() {
 		return id;
@@ -52,6 +49,14 @@ public class UserFollower {
 	public void setFollower(User follower) {
 		this.follower = follower;
 	}
+
+	@Override
+	public String toString() {
+		return "UserFollowers [id=" + id + ", user_id=" + user_id + ", follower=" + follower + "]";
+	}
+
+	
+	
 	
 	
 	
