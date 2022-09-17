@@ -1,0 +1,257 @@
+2022-09-18 00:48:20,429 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-09-18 00:54:01,776 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-09-18 00:59:30,379 [Worker-24: Configuring project workspace-sts-3.9.12.RELEASE] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration ASTFrame (1) references non-existing project Spring-Boot-Crud.
+org.eclipse.core.runtime.CoreException: Launch configuration ASTFrame (1) references non-existing project Spring-Boot-Crud.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2022-09-18 00:59:30,387 [Worker-24: Configuring project workspace-sts-3.9.12.RELEASE] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration ASTFrame references non-existing project SpringOrm.
+org.eclipse.core.runtime.CoreException: Launch configuration ASTFrame references non-existing project SpringOrm.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2022-09-18 00:59:30,391 [Worker-24: Configuring project workspace-sts-3.9.12.RELEASE] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration App (1) references non-existing project springJdbc.
+org.eclipse.core.runtime.CoreException: Launch configuration App (1) references non-existing project springJdbc.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2022-09-18 00:59:30,398 [Worker-24: Configuring project workspace-sts-3.9.12.RELEASE] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration App (3) references non-existing project SpringOrm.
+org.eclipse.core.runtime.CoreException: Launch configuration App (3) references non-existing project SpringOrm.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2022-09-18 00:59:30,408 [Worker-24: Configuring project workspace-sts-3.9.12.RELEASE] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration ArrayHelper references non-existing project Spring-Boot-Crud.
+org.eclipse.core.runtime.CoreException: Launch configuration ArrayHelper references non-existing project Spring-Boot-Crud.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2022-09-18 00:59:30,441 [Worker-24: Configuring project workspace-sts-3.9.12.RELEASE] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration SpringBootCrudApplication references non-existing project Spring-Boot-Crud.
+org.eclipse.core.runtime.CoreException: Launch configuration SpringBootCrudApplication references non-existing project Spring-Boot-Crud.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713) ~[org.eclipse.jdt.launching_3.17.0.v20200215-0651.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36) [org.eclipse.m2e.jdt_1.15.0.20200226-1722.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266) [org.eclipse.debug.core_3.15.0.v20200224-0654.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2022-09-18 00:59:38,968 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.springOrm:SpringOrm:0.0.1-SNAPSHOT @ C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringCrudOrn\pom.xml.
+2022-09-18 00:59:40,665 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:40,665 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringCrudOrn\src\main\resources
+2022-09-18 00:59:40,667 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:40,668 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringCrudOrn\src\test\resources
+2022-09-18 00:59:41,771 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.springcore.jdbc:springJdbc:0.0.1-SNAPSHOT @ C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringJdbc\pom.xml.
+2022-09-18 00:59:41,997 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:41,997 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringJdbc\src\main\resources
+2022-09-18 00:59:41,999 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:42,000 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringJdbc\src\test\resources
+2022-09-18 00:59:42,676 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.springcoreinjection:springcoreinjection:0.0.1-SNAPSHOT @ C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\springcoreinjection\pom.xml.
+2022-09-18 00:59:42,846 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:42,847 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\springcoreinjection\src\main\resources
+2022-09-18 00:59:42,849 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:42,850 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\springcoreinjection\src\test\resources
+2022-09-18 00:59:45,528 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:45,529 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringCrudOrn\src\main\resources
+2022-09-18 00:59:45,530 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:45,531 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringCrudOrn\src\test\resources
+2022-09-18 00:59:45,699 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:45,704 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringJdbc\src\main\resources
+2022-09-18 00:59:45,705 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:45,706 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\SpringJdbc\src\test\resources
+2022-09-18 00:59:45,894 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:45,894 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\springcoreinjection\src\main\resources
+2022-09-18 00:59:45,895 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 00:59:45,895 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Webkorps\Documents\workspace-sts-3.9.12.RELEASE\springcoreinjection\src\test\resources
+2022-09-18 01:02:43,965 [Worker-28: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Com.Spring-Boot-Crud:SpringBoot-Crud:0.0.1-SNAPSHOT @ D:\Spring-Boot-Projects\SpringBoot-Crud\pom.xml.
+2022-09-18 01:02:45,396 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:45,396 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:45,401 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-09-18 01:02:45,418 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-09-18 01:02:45,431 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:45,431 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:45,431 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Spring-Boot-Projects\SpringBoot-Crud\src\test\resources
+2022-09-18 01:02:45,914 [Worker-28: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.smart:smartcontactmanager:0.0.1-SNAPSHOT @ D:\Spring-Boot-Projects\smartcontactmanager\pom.xml.
+2022-09-18 01:02:46,192 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.1.5.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.1.5.Final
+2022-09-18 01:02:46,366 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:46,366 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:46,367 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-09-18 01:02:46,370 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2022-09-18 01:02:46,394 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:46,394 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:46,394 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Spring-Boot-Projects\smartcontactmanager\src\test\resources
+2022-09-18 01:02:47,699 [Worker-13: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.smart:smartcontactmanager:0.0.1-SNAPSHOT @ D:\Spring-Boot-Projects\smartcontactmanager\pom.xml.
+2022-09-18 01:02:48,143 [Worker-13: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.1.5.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.1.5.Final
+2022-09-18 01:02:48,433 [Worker-13: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Com.Spring-Boot-Crud:SpringBoot-Crud:0.0.1-SNAPSHOT @ D:\Spring-Boot-Projects\SpringBoot-Crud\pom.xml.
+2022-09-18 01:02:48,868 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:48,868 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:48,875 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-09-18 01:02:48,892 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-09-18 01:02:48,903 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:48,904 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:48,904 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Spring-Boot-Projects\SpringBoot-Crud\src\test\resources
+2022-09-18 01:02:50,310 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:50,311 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:50,311 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-09-18 01:02:50,318 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-09-18 01:02:50,322 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:50,322 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:50,322 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Spring-Boot-Projects\SpringBoot-Crud\src\test\resources
+2022-09-18 01:02:51,219 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-validator:jar:6.1.5.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.1.5.Final
+2022-09-18 01:02:51,248 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:51,248 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:51,249 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-09-18 01:02:51,251 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2022-09-18 01:02:51,273 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-18 01:02:51,273 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-09-18 01:02:51,273 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Spring-Boot-Projects\smartcontactmanager\src\test\resources

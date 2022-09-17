@@ -50,18 +50,19 @@ public class UserServiceImp implements UserService {
 		String fullName = user.getFullName();
 		String use = generatUsername(fullName);
 		user.setUserName(use);
-		User usr = this.userRepository.save(user);
-		return usr;
+		user.setUserImage("No_image.png");
+		user.setFavoriteBooks("Not Found");
+		user.setFavoritePlaces("Not Found");
+		user.setFavoriteSongs("Not Found");
+
+		return this.userRepository.save(user);
 	}
 
 	// this method use for generatUsername...
 	public String generatUsername(String fullName) {
 		Random random = new Random();
-
 		int num = 100 + random.nextInt(899);
-		String userName = fullName.substring(0, 1).toUpperCase() + fullName.substring(1) + num;
-		System.out.println("userName-->" + userName);
-		return userName;
+		return fullName.substring(0, 1).toUpperCase() + fullName.substring(1) + num;
 	}
 
 	// set UserLogin ServiceImp
@@ -101,6 +102,20 @@ public class UserServiceImp implements UserService {
 	public void setUserProfile(User user, String userName, MultipartFile imageFile)
 			throws FileNotFoundException, IOException {
 		String profilePhoto = "";
+		if (imageFile.isEmpty()) {
+			user.setUserImage("No_image.png");
+		}
+		if (user.getFavoriteBooks().isEmpty()) {
+			user.setFavoriteBooks("Not Found");
+
+		}
+		if (user.getFavoritePlaces().isEmpty()) {
+			user.setFavoritePlaces("Not Found");
+
+		}
+		if (user.getFavoriteSongs().isEmpty()) {
+			user.setFavoriteSongs("Not Found");
+		}
 		if (!imageFile.isEmpty()) {
 			profilePhoto = imageFile.getOriginalFilename().trim();
 
@@ -114,12 +129,15 @@ public class UserServiceImp implements UserService {
 				fs.write(bytes);
 			fs.close();
 			user.setUserImage(profilePhoto);
+			User userByUserName = this.userRepository.findByUserEmail(userName);
+			userByUserName.setUserImage(profilePhoto);
+
 		}
 		User userByUserName = this.userRepository.findByUserEmail(userName);
 		userByUserName.setFavoriteBooks(user.getFavoriteBooks());
 		userByUserName.setFavoritePlaces(user.getFavoritePlaces());
 		userByUserName.setFavoriteSongs(user.getFavoriteSongs());
-		userByUserName.setUserImage(profilePhoto);
+//		userByUserName.setUserImage(profilePhoto);
 		System.out.println("userByUserName-->" + userByUserName);
 		userRepository.save(userByUserName);
 
@@ -159,8 +177,8 @@ public class UserServiceImp implements UserService {
 
 			followersPost.addAll(this.userPostService.getPost(allFollower.get(i).getFollower().getId()));
 		}
-          userProfileDto.setGetAllFollowerPost(followersPost);
-          System.out.println("post1--->"+followersPost);
+		userProfileDto.setGetAllFollowerPost(followersPost);
+		System.out.println("post1--->" + followersPost);
 		userProfileDto.setUserFollowers(userFollowerServiceImp.getAllFollower(userId));
 		return userProfileDto;
 	}

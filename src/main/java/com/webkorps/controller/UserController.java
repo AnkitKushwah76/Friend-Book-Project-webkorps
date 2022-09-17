@@ -1,6 +1,5 @@
 package com.webkorps.controller;
 
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
@@ -29,7 +28,6 @@ import com.webkorps.model.UserFollowers;
 import com.webkorps.serviceImpl.UserPostServiceImp;
 import com.webkorps.serviceImpl.UserServiceImp;
 
-
 @Controller
 public class UserController {
 
@@ -42,7 +40,7 @@ public class UserController {
 
 	@Autowired
 	private UserPostService userPostService;
-	
+
 	@Autowired
 	private UserPostServiceImp userPostServiceImp;
 
@@ -87,8 +85,8 @@ public class UserController {
 		UserProfileDto userprofileDto = this.userServiceImp.getProfile((int) session.getAttribute("userId"));
 		System.out.println("profile--->anku" + userprofileDto);
 		List<UserFollowers> userFollowers = userprofileDto.getUserFollowers();
-		System.out.println("userFollowers--78787-"+userFollowers);
-		
+		System.out.println("userFollowers--78787-" + userFollowers);
+
 		modelAndView.addObject("userprofileDto", userprofileDto);
 		modelAndView.addObject("findByUser", user);
 		modelAndView.setViewName("ShowUserProfile");
@@ -98,19 +96,15 @@ public class UserController {
 	// Update UserProfile Api.....
 	@RequestMapping("/updateUserProfile")
 	public ModelAndView ShowUpdateUserProfileForm(HttpSession session) {
-
 		ModelAndView modelAndView = new ModelAndView();
 		Integer userId = (Integer) session.getAttribute("userId");
-		System.out.println("userId--->" + userId);
-		User findByid = this.userRepository.findByid(userId);
-		System.out.println("findByid---mansnsss" + findByid);
-		modelAndView.addObject("findByid", findByid);
+		modelAndView.addObject("findByid", this.userRepository.findByid(userId));
 		modelAndView.setViewName("updateUserProfile");
-
 		return modelAndView;
 
 	}
-  //search user api....
+
+	// search user api....
 	@GetMapping("/searchdata")
 	public ModelAndView searchdata(@RequestParam("search") String search) {
 		ModelAndView modelAndView = new ModelAndView();

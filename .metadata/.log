@@ -1,0 +1,1173 @@
+!SESSION 2022-09-18 00:43:56.390 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_341
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:43:57.221
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getRawHeaders(BundleInfo.java:130)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:599)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:1)
+	at org.eclipse.equinox.weaving.hooks.SupplementerRegistry.addSupplementer(SupplementerRegistry.java:172)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.initialize(WeavingHook.java:138)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.start(WeavingHook.java:208)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startActivator(FrameworkExtensionInstaller.java:281)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startExtensionActivators(FrameworkExtensionInstaller.java:218)
+	at org.eclipse.osgi.internal.framework.SystemBundleActivator.start(SystemBundleActivator.java:113)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.initWorker(EquinoxBundle.java:197)
+	at org.eclipse.osgi.container.SystemModule.init(SystemModule.java:99)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:280)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:264)
+	at org.eclipse.osgi.launch.Equinox.init(Equinox.java:185)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:316)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 35 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:43:58.146
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getEntry(BundleInfo.java:397)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getEntry(EquinoxBundle.java:701)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.parseDefinitions(AspectAdminImpl.java:348)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.initialize(AspectAdminImpl.java:168)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingStarter.start(AspectJWeavingStarter.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingActivator.start(AspectJWeavingActivator.java:46)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1780)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 34 more
+
+!ENTRY org.eclipse.jface 2 0 2022-09-18 00:48:16.459
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-09-18 00:48:16.459
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f97e3de,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f09907,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2022-09-18 00:48:17.224
+!MESSAGE org.eclipse.jdt.junit.ResultView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.ui 2 2 2022-09-18 00:48:17.224
+!MESSAGE org.springframework.ide.eclipse.aop.ui.navigator.aopReferenceModelNavigator: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.ui 2 2 2022-09-18 00:48:17.225
+!MESSAGE org.eclipse.contribution.xref.ui.views.XReferenceView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:48:20.517
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:102)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:48:20.519
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:103)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-09-18 00:48:21.372
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Webkorps'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springsource.ide.eclipse.dashboard.ui 4 0 2022-09-18 00:48:21.708
+!MESSAGE Unexpected exception
+!STACK 1
+org.eclipse.ui.PartInitException: Unable to open editor, unknown editor ID: 'org.springsource.ide.eclipse.commons.gettingstarted.dashboard.WelcomeDashboard'
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3142)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3100)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3098)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3068)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3051)
+	at org.springsource.ide.eclipse.dashboard.ui.actions.ShowDashboardPageAction$1.runInUIThread(ShowDashboardPageAction.java:77)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3897)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3527)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+!SUBENTRY 1 org.eclipse.ui 4 0 2022-09-18 00:48:21.709
+!MESSAGE Unable to open editor, unknown editor ID: 'org.springsource.ide.eclipse.commons.gettingstarted.dashboard.WelcomeDashboard'
+!SESSION 2022-09-18 00:48:44.199 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_341
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:48:44.961
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getRawHeaders(BundleInfo.java:130)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:599)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:1)
+	at org.eclipse.equinox.weaving.hooks.SupplementerRegistry.addSupplementer(SupplementerRegistry.java:172)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.initialize(WeavingHook.java:138)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.start(WeavingHook.java:208)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startActivator(FrameworkExtensionInstaller.java:281)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startExtensionActivators(FrameworkExtensionInstaller.java:218)
+	at org.eclipse.osgi.internal.framework.SystemBundleActivator.start(SystemBundleActivator.java:113)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.initWorker(EquinoxBundle.java:197)
+	at org.eclipse.osgi.container.SystemModule.init(SystemModule.java:99)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:280)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:264)
+	at org.eclipse.osgi.launch.Equinox.init(Equinox.java:185)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:316)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 35 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:48:45.802
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getEntry(BundleInfo.java:397)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getEntry(EquinoxBundle.java:701)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.parseDefinitions(AspectAdminImpl.java:348)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.initialize(AspectAdminImpl.java:168)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingStarter.start(AspectJWeavingStarter.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingActivator.start(AspectJWeavingActivator.java:46)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1780)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 34 more
+
+!ENTRY org.eclipse.jface 2 0 2022-09-18 00:48:48.332
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-09-18 00:48:48.332
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5cb6b81b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a15bbf3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:48:51.778
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:102)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:48:51.782
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:103)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-09-18 00:48:51.938
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Webkorps'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-09-18 00:49:06.432 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_341
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:49:07.189
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getRawHeaders(BundleInfo.java:130)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:599)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:1)
+	at org.eclipse.equinox.weaving.hooks.SupplementerRegistry.addSupplementer(SupplementerRegistry.java:172)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.initialize(WeavingHook.java:138)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.start(WeavingHook.java:208)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startActivator(FrameworkExtensionInstaller.java:281)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startExtensionActivators(FrameworkExtensionInstaller.java:218)
+	at org.eclipse.osgi.internal.framework.SystemBundleActivator.start(SystemBundleActivator.java:113)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.initWorker(EquinoxBundle.java:197)
+	at org.eclipse.osgi.container.SystemModule.init(SystemModule.java:99)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:280)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:264)
+	at org.eclipse.osgi.launch.Equinox.init(Equinox.java:185)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:316)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 35 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:49:08.018
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getEntry(BundleInfo.java:397)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getEntry(EquinoxBundle.java:701)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.parseDefinitions(AspectAdminImpl.java:348)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.initialize(AspectAdminImpl.java:168)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingStarter.start(AspectJWeavingStarter.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingActivator.start(AspectJWeavingActivator.java:46)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1780)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 34 more
+
+!ENTRY org.eclipse.jface 2 0 2022-09-18 00:49:10.485
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-09-18 00:49:10.485
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78141c58,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9863ed5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-09-18 00:49:12.455
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Webkorps'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-09-18 00:53:29.676 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_341
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:53:30.446
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getRawHeaders(BundleInfo.java:130)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:599)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:1)
+	at org.eclipse.equinox.weaving.hooks.SupplementerRegistry.addSupplementer(SupplementerRegistry.java:172)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.initialize(WeavingHook.java:138)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.start(WeavingHook.java:208)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startActivator(FrameworkExtensionInstaller.java:281)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startExtensionActivators(FrameworkExtensionInstaller.java:218)
+	at org.eclipse.osgi.internal.framework.SystemBundleActivator.start(SystemBundleActivator.java:113)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.initWorker(EquinoxBundle.java:197)
+	at org.eclipse.osgi.container.SystemModule.init(SystemModule.java:99)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:280)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:264)
+	at org.eclipse.osgi.launch.Equinox.init(Equinox.java:185)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:316)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 35 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:53:31.316
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getEntry(BundleInfo.java:397)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getEntry(EquinoxBundle.java:701)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.parseDefinitions(AspectAdminImpl.java:348)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.initialize(AspectAdminImpl.java:168)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingStarter.start(AspectJWeavingStarter.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingActivator.start(AspectJWeavingActivator.java:46)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1780)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 34 more
+
+!ENTRY org.eclipse.jface 2 0 2022-09-18 00:53:34.069
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-09-18 00:53:34.069
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@65f36591,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a7bd9a8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-09-18 00:53:36.093
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Webkorps'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:54:02.842
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:102)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 00:54:02.848
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:103)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-09-18 00:59:30.381
+!MESSAGE Launch configuration ASTFrame (1) references non-existing project Spring-Boot-Crud.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration ASTFrame (1) references non-existing project Spring-Boot-Crud.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2022-09-18 00:59:30.382
+!MESSAGE Launch configuration ASTFrame (1) references non-existing project Spring-Boot-Crud.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-09-18 00:59:30.388
+!MESSAGE Launch configuration ASTFrame references non-existing project SpringOrm.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration ASTFrame references non-existing project SpringOrm.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2022-09-18 00:59:30.388
+!MESSAGE Launch configuration ASTFrame references non-existing project SpringOrm.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-09-18 00:59:30.392
+!MESSAGE Launch configuration App (1) references non-existing project springJdbc.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration App (1) references non-existing project springJdbc.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2022-09-18 00:59:30.392
+!MESSAGE Launch configuration App (1) references non-existing project springJdbc.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-09-18 00:59:30.399
+!MESSAGE Launch configuration App (3) references non-existing project SpringOrm.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration App (3) references non-existing project SpringOrm.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2022-09-18 00:59:30.399
+!MESSAGE Launch configuration App (3) references non-existing project SpringOrm.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-09-18 00:59:30.409
+!MESSAGE Launch configuration ArrayHelper references non-existing project Spring-Boot-Crud.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration ArrayHelper references non-existing project Spring-Boot-Crud.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2022-09-18 00:59:30.409
+!MESSAGE Launch configuration ArrayHelper references non-existing project Spring-Boot-Crud.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-09-18 00:59:30.441
+!MESSAGE Launch configuration SpringBootCrudApplication references non-existing project Spring-Boot-Crud.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration SpringBootCrudApplication references non-existing project Spring-Boot-Crud.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1838)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1713)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationAdded(MavenLaunchConfigurationListener.java:36)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationAdded(LaunchManager.java:2114)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor.visit(LaunchManager.java:372)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2266)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1563)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:457)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.access$0(SmartImportJob.java:396)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2022-09-18 00:59:30.441
+!MESSAGE Launch configuration SpringBootCrudApplication references non-existing project Spring-Boot-Crud.
+
+!ENTRY org.eclipse.jface 2 0 2022-09-18 00:59:42.383
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:515)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1976)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source)
+	at java.util.concurrent.ForkJoinTask.doExec(Unknown Source)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(Unknown Source)
+	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-18 01:02:46.192
+!MESSAGE The artifact org.hibernate:hibernate-validator:jar:6.1.5.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.1.5.Final
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-18 01:02:48.144
+!MESSAGE The artifact org.hibernate:hibernate-validator:jar:6.1.5.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.1.5.Final
+
+!ENTRY org.springframework.ide.eclipse.beans.core 1 0 2022-09-18 01:02:50.697
+!MESSAGE Error occured processing 'com.smartcontactmanager.SmartcontactmanagerApplication'
+!STACK 0
+org.springframework.core.annotation.AnnotationConfigurationException: Attribute 'proxyBeanMethods' in annotation [org.springframework.boot.SpringBootConfiguration] is declared as an @AliasFor nonexistent attribute 'proxyBeanMethods' in annotation [org.springframework.context.annotation.Configuration].; nested exception is java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:2128)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.from(AnnotationUtils.java:2095)
+	at org.springframework.core.annotation.AnnotationUtils.getAttributeAliasNames(AnnotationUtils.java:1751)
+	at org.springframework.core.annotation.AnnotationUtils.isSynthesizable(AnnotationUtils.java:1710)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotation(AnnotationUtils.java:1493)
+	at org.springframework.core.annotation.AnnotationUtils.synthesizeAnnotationArray(AnnotationUtils.java:1597)
+	at org.springframework.core.annotation.AnnotationUtils.getAnnotations(AnnotationUtils.java:231)
+	at org.springframework.core.type.classreading.AnnotationAttributesReadingVisitor.visitEnd(AnnotationAttributesReadingVisitor.java:76)
+	at org.springframework.asm.ClassReader.readAnnotationValues(ClassReader.java:2020)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:676)
+	at org.springframework.asm.ClassReader.accept(ClassReader.java:527)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtConnectedMetadataReader.<init>(JdtConnectedMetadataReader.java:45)
+	at org.springframework.ide.eclipse.core.java.classreading.JdtMetadataReaderFactory.getMetadataReader(JdtMetadataReaderFactory.java:53)
+	at org.springframework.ide.eclipse.core.java.classreading.CachingJdtMetadataReaderFactory.getMetadataReader(CachingJdtMetadataReaderFactory.java:38)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.registerBean(BeansJavaConfig.java:368)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:229)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NoSuchMethodException: org.springframework.context.annotation.Configuration.proxyBeanMethods()
+	at java.lang.Class.getDeclaredMethod(Unknown Source)
+	at org.springframework.core.annotation.AnnotationUtils$AliasDescriptor.<init>(AnnotationUtils.java:2121)
+	... 22 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-18 01:02:51.219
+!MESSAGE The artifact org.hibernate:hibernate-validator:jar:6.1.5.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:6.1.5.Final
+!SESSION 2022-09-18 01:05:21.162 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_341
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 01:05:21.947
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getRawHeaders(BundleInfo.java:130)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:599)
+	at org.eclipse.osgi.storage.BundleInfo$CachedManifest.get(BundleInfo.java:1)
+	at org.eclipse.equinox.weaving.hooks.SupplementerRegistry.addSupplementer(SupplementerRegistry.java:172)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.initialize(WeavingHook.java:138)
+	at org.eclipse.equinox.weaving.hooks.WeavingHook.start(WeavingHook.java:208)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startActivator(FrameworkExtensionInstaller.java:281)
+	at org.eclipse.osgi.storage.FrameworkExtensionInstaller.startExtensionActivators(FrameworkExtensionInstaller.java:218)
+	at org.eclipse.osgi.internal.framework.SystemBundleActivator.start(SystemBundleActivator.java:113)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.initWorker(EquinoxBundle.java:197)
+	at org.eclipse.osgi.container.SystemModule.init(SystemModule.java:99)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:280)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.init(EquinoxBundle.java:264)
+	at org.eclipse.osgi.launch.Equinox.init(Equinox.java:185)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:316)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 35 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 01:05:22.815
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getEntry(BundleInfo.java:397)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getEntry(EquinoxBundle.java:701)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.parseDefinitions(AspectAdminImpl.java:348)
+	at org.eclipse.equinox.weaving.aspectj.loadtime.AspectAdminImpl.initialize(AspectAdminImpl.java:168)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingStarter.start(AspectJWeavingStarter.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.weaving.aspectj.AspectJWeavingActivator.start(AspectJWeavingActivator.java:46)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1780)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 34 more
+
+!ENTRY org.eclipse.jface 2 0 2022-09-18 01:05:25.432
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-09-18 01:05:25.432
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e322108,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f5e64c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 01:05:29.777
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:102)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.epp.mpc.help.ui 4 0 2022-09-18 01:05:29.780
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.util.zip.ZipException: Exception in opening zip file: C:\Program Files\sts-3.9.12.RELEASE\plugins\org.eclipse.epp.mpc.help.ui_1.8.2.v20200210-1402.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:336)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:128)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:261)
+	at org.eclipse.equinox.weaving.hooks.WeavingBundleFile.getEntry(WeavingBundleFile.java:65)
+	at org.eclipse.osgi.storage.bundlefile.BundleFileWrapper.getEntry(BundleFileWrapper.java:55)
+	at org.eclipse.osgi.storage.Storage.listEntryPaths(Storage.java:2000)
+	at org.eclipse.osgi.storage.Storage.findEntries(Storage.java:1923)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.findEntries(EquinoxBundle.java:718)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.NamespaceManager.maybeAddNamespaceHandlerFor(NamespaceManager.java:103)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin.initNamespaceHandlers(SpringXmlNamespacesManagerPlugin.java:145)
+	at org.springframework.ide.eclipse.xml.namespaces.manager.SpringXmlNamespacesManagerPlugin$1.run(SpringXmlNamespacesManagerPlugin.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:322)
+	... 13 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-09-18 01:05:30.093
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Webkorps'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

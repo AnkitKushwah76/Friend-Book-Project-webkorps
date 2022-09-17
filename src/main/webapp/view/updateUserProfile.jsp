@@ -18,20 +18,19 @@
                         <form  enctype="multipart/form-data" id="login-form" class="form" action=userProfileSet method="post">
                             <h3 class="text-center text-info">Update-UserProfile</h3>
                             
-                            
                             <div class="form-group">
                                 <label for="username" class="text-info">FavoriteBooks</label><br>
-                                <input type="text" value=${findByid.getFavoriteBooks()} name="favoriteBooks" id="username" class="form-control" placeholder="Enter FavoriteBooks">
+                                <input type="text" value="${findByid.getFavoriteBooks()}" name="favoriteBooks" id="username" class="form-control" placeholder="Enter FavoriteBooks">
                             </div>
                             
                             <div class="form-group">
                                 <label for="password" class="text-info">FavoriteSongs</label><br>
-                                <input type="text" value= ${findByid.getFavoriteSongs()} name="favoriteSongs" id="password" class="form-control" placeholder="Enter FavoriteSongs">
+                                <input type="text" value= "${findByid.getFavoriteSongs()}" name="favoriteSongs" id="password" class="form-control" placeholder="Enter FavoriteSongs">
                             </div>
                             
                             <div class="form-group">
                                 <label for="password" class="text-info">FavoritePlaces</label><br>
-                                <input type="text" value=${findByid.getFavoritePlaces()} name="favoritePlaces" id="password" class="form-control" placeholder="FavoritePlaces">
+                                <input type="text" value="${findByid.getFavoritePlaces()}" name="favoritePlaces" id="password" class="form-control" placeholder="FavoritePlaces">
                             </div>
                             
                             

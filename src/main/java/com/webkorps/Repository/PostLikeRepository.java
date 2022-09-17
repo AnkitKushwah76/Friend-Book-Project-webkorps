@@ -7,16 +7,18 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.webkorps.model.PostLike;
+import com.webkorps.model.User;
+import com.webkorps.model.UserPost;
 
 @Repository
 public interface PostLikeRepository extends JpaRepository<PostLike, Integer> {
 
-	@Query(value = "select count(*) from post_like where user_post=:id", nativeQuery = true)
-	public int countPostLike(@Param("id") int id);
+	public  PostLike findByUserPostAndUserId(@Param("userPostId") UserPost userPostId, @Param("userId") User userId);
 
+	@Modifying
+	@Query(value = "delete from post_like where user_post=:userPost and user_id=:userId",nativeQuery = true)
+	public int dislike(@Param("userPost") UserPost userPost,@Param("userId") int userId);
 	
-//	@Modifying
-//	@Query(value="update post_like set status=:a where user_post=:userid",nativeQuery = true)
-//	public int updatestatus(@Param("a") boolean a,@Param("userid") int userid);
-//	
+
+
 }

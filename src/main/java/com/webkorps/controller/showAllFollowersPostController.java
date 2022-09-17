@@ -62,7 +62,7 @@ public class showAllFollowersPostController {
 		//PostLike addPostLike = this.postLikeServiceImp.addPostLike(postId, (int)session.getAttribute("userId"));  
 		  //userProfileDto.setCountPostLike(postLikeRepository.countPostLike(postId));
 	  //redirectView.setUrl("showAllFollowersPost");
-   if(this.postLikeServiceImp.addPostLike(postId, (int)session.getAttribute("userId")))
+   if(this.postLikeServiceImp.addPostLike(postId, (Integer)session.getAttribute("userId")))
    {
 	 
 	   return "success";

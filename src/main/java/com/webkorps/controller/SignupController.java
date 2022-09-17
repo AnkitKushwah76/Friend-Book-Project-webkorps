@@ -30,7 +30,7 @@ public class SignupController {
 			user.setStatus(true);
 			User usr = this.userService.userSignup(user);
 			  modelAndView.addObject("sucessfull", "Registration Sucessfully !!");	
-			modelAndView.setViewName("signup");
+			modelAndView.setViewName("login");
 
 			return modelAndView;
 		}

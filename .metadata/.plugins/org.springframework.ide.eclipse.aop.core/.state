@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringJdbc"/>
+<aop-project name="springcoreinjection"/>
+<aop-project name="smartcontactmanager"/>
+<aop-project name="SpringCrudOrn"/>
+<aop-project name="SpringBoot-Crud"/>
+</aop-reference-model>

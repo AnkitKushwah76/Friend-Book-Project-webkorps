@@ -1,0 +1,12 @@
+INDEX VERSION 1.4+D:\Spring-Boot-Projects\Friend-Book-Project\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3363891694.index
+615118013.index
+4116475529.index
+2394217831.index
+100381372.index
+3661683793.index
+2417403865.index
+3724177927.index
+3887346930.index
+2852373993.index
+2595894021.index

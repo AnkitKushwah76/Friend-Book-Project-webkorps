@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@include file="/view/Navbar/UserNavbar.jsp"%>
+<%@include file="/view/popup.jsp"%>
 <%@page import="java.util.*"%>
 <%@page import="com.webkorps.model.UserPost"%>
 <%@page import="com.webkorps.model.User"%>
@@ -13,10 +14,12 @@
 
 <link href="/view/css/stylepro.css" rel="stylesheet" type="text/css">
 <script
-		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-		integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+	integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -33,12 +36,18 @@
 	<h1><%=userfollowersdto.getCountPostLike()%></h1>
 
 	<h1 class="text-center">All Upload Posts</h1>
+
 	<%
 		ArrayList<UserPost> followersposts = (ArrayList<UserPost>) userfollowersdto.getGetAllFollowerPost();
 
+	boolean f = true;
 	if (followersposts.size() > 0) {
 		for (int i = 0; i < followersposts.size(); i++) {
 	%>
+
+
+
+
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-lg-4 offset-lg-5">
@@ -61,26 +70,48 @@
 								<%=followersposts.get(i).getDescription()%>
 							</h6>
 						</ul>
-										<%-- <a href="postLike?postId=<%=followersposts.get(i).getId()%>"><button
-							class="btn profile-edit-btn">like</button></a>
-							 --%>
-							
-							<%-- <%
-							if(<%=followersposts.get(i).getId()%>==1)
-							%> --%>
-							
-							
-							
-						
+						<%
+							/* 							if (followersposts.get(i).getPostlike().isEmpty()) {
+
+						*/ if (followersposts.get(i).getPostlike().isEmpty()) {
+						%>
 						<span><button class="p-1 fa fa-heart-o" style="color: red"
 								onClick="adddislike(<%=followersposts.get(i).getId()%>)"
 								id="like<%=followersposts.get(i).getId()%>"></button></span> <span><%=followersposts.get(i).getPostlike().size()%></span>
-						
-				</div>
 
+						<%
+							} else {
+						%>
+
+						<span><button class="p-1 fa fa-heart" style="color: red"
+								onClick="adddislike(<%=followersposts.get(i).getId()%>)"
+								id="like<%=followersposts.get(i).getId()%>"></button></span> <span><%=followersposts.get(i).getPostlike().size()%></span>
+						<%
+							}
+						%>
+
+						<a data-toggle="modal" data-target="#comments" class="item">
+						
+						<i class="fa-solid fa-comment-dots"></i></a>
+						
+
+						<%-- <div class="row mt-2">
+								<div class="col-md-2"></div>
+									<div class="col-md-8">
+									<button class="fa fa-comments-o"
+								onClick="adddislike(<%=followersposts.get(i).getId()%>)"
+								id="like<%=followersposts.get(i).getId()%>"></button>
+								
+								
+										<a href="" onClick="getComments()" class="mt-2" data-bs-toggle="modal"
+											data-bs-target="#viewcomments">view comments</a>
+									</div>
+								</div> --%>
+					</div>
+
+				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 
 	<%
@@ -92,7 +123,7 @@
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
-				<img alt="" src="../view/userProfileImg/noresult.png">
+				<img alt="" src="../view/userProfileImg/membership.png">
 			</div>
 			<div class="col-md-4"></div>
 		</div>
@@ -140,11 +171,7 @@ var i=0;
 								
 							}
 					});
-				
-		
-			 
-			 
-		}
+					}
 		else{
 			
 			console.log("else");
@@ -155,9 +182,6 @@ var i=0;
 	}
 	
 </script>
-
-
-
 
 
 

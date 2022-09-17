@@ -13,7 +13,12 @@
 <link href="/view/css/stylepro.css" rel="stylesheet" type="text/css">
 <%@page isELIgnored="false"%>
 <meta charset="ISO-8859-1">
+<!-- Bootstrap CSS -->
+
 <title>this is about page</title>
+
+
+
 </head>
 <body>
 
@@ -71,10 +76,10 @@
 						</c:if>
 						<c:if test="${userprofileDto.getCountFollowers()>0}">
 							<li><p style="margin-left: 20px">
-							<a data-toggle="modal" data-target="#exampleModa3"
-										class="nav-link ">
-									<span class="profile-stat-count">${userprofileDto.getCountFollowers()}</span>
-									Followers</a></li>
+									<a data-toggle="modal" data-target="#Followers"
+										class="nav-link "> <span class="profile-stat-count">${userprofileDto.getCountFollowers()}</span>
+										Followers
+									</a></li>
 						</c:if>
 
 
@@ -82,7 +87,7 @@
 
 						<c:if test="${userprofileDto.getCountFollowing() >0}">
 							<li><p style="margin-left: 20px">
-									<a data-toggle="modal" data-target="#exampleModa2"
+									<a data-toggle="modal" data-target="#following"
 										class="nav-link "> <span class="profile-stat-count ">${userprofileDto.getCountFollowing()}</span>
 										Following
 									</a></li>
@@ -142,8 +147,8 @@
 								Description :
 								<%=posts.get(i).getDescription()%>
 							</h6>
-							
-							<h6><%=profile.getCountPostLike() %></h6>
+						<span>Like :- <%=posts.get(i).getPostlike().size()%></span>
+
 						</ul>
 					</div>
 
@@ -160,7 +165,7 @@
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<img alt="" src="../view/userProfileImg/noresult.png">
+					<img alt="" src="../view/userProfileImg/membership.png">
 				</div>
 				<div class="col-md-4"></div>
 			</div>
@@ -175,170 +180,104 @@
 
 
 
-<!--  Following Modal -->
+
+	<!--  Followers  Modal -->
 
 
-<div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog"
-	aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabe2">All Following</h5>
+	<div class="modal fade" id="Followers" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabe2">All Followers</h5>
+				</div>
+				<%
+					if (followers.size() > 0) {
+					for (int i = 0; i < followers.size(); i++) {
+				%>
+
+				<img class="myProfilePicture"
+					src="../view/userProfileImg/<%=followers.get(i).getFollower().getUserImage()%>" />
+
+
+				<span><%=followers.get(i).getFollower().getFullName()%></span>
+
+				<%
+					}
+				%>
+
 			</div>
-
-			
-
-			<table class="table">
-				<thead class="thead-dark">
-					<tr>
-
-						<th scope="col">Image</th>
-						<th scope="col">Name</th>
-						<th scope="col">Action</th>
-					</tr>
-				</thead>
-				<tbody>
-                <%
-				if (following.size() > 0) {
-				for (int i = 0; i < following.size(); i++) {
-			%>
-
-					<tr>
-						<td><img class="myProfilePicture"
-							src="../view/PostImage/<%=following.get(i).getFollowing().getUserImage()%>" />
-
-						</td>
-						<td><span><%=following.get(i).getFollowing().getFullName()%></span></td>
-						</td>
-						<td>
-							<button class="btn btn-danger btn-sm"></button>
-							<button class="btn btn-primary btn-sm"></button>
-
-						</td>
-
-					</tr>
-               <%
-	         }
-           %>
-				</tbody>
-			</table>
-
-
-
 		</div>
 	</div>
-</div>
 
-<%
-	} else {
-%>
-<div class="container mt-5">
-	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-			<img alt="" src="../view/userProfileImg/noresult.png">
-		</div>
-		<div class="col-md-4"></div>
-	</div>
-</div>
-<%
-	}
-%>
-</div>
-
-<!--  Following Modal -->
-
-
-
-
- <!--  Followers  Modal -->
-
-
-<div class="modal fade" id="exampleModa3" tabindex="-1" role="dialog"
-	aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabe2">All Following</h5>
+	<%
+		} else {
+	%>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<img alt="" src="../view/userProfileImg/membership.png">
 			</div>
-
-			
-
-			<table class="table">
-				<thead class="thead-dark">
-					<tr>
-
-						<th scope="col">Image</th>
-						<th scope="col">Name</th>
-						<th scope="col">Action</th>
-					</tr>
-				</thead>
-				<tbody>
-
-                     <%
-				if (followers.size() > 0) {
-				for (int i = 0; i < followers.size(); i++) {
-			%>
-					<tr>
-						<td><img class="myProfilePicture"
-							src="../view/PostImage/<%=followers .get(i).getFollower().getUserImage()%>" />
-
-						</td>
-						<td><span><%=followers.get(i).getFollower().getFullName()%></span></td>
-						</td>
-						<td>
-							<button class="btn btn-danger btn-sm"></button>
-							<button class="btn btn-primary btn-sm"></button>
-
-						</td>
-
-					</tr>
-		                 <%
-		       	}
-	        	%>
-				</tbody>
-			</table>
-
-
-
+			<div class="col-md-4"></div>
 		</div>
 	</div>
-</div>
 
-<%
-	} else {
-%>
-<div class="container mt-5">
-	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-			<img alt="" src="../view/userProfileImg/noresult.png">
+	<%
+		}
+	%>
+
+
+	<!--  Followers  Modal -->
+
+
+	<div class="modal fade" id="following" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabe2">All Followers</h5>
+				</div>
+				<%
+					if (following.size() > 0) {
+					for (int i = 0; i < following.size(); i++) {
+				%>
+
+				<span><img class="myProfilePicture"
+					src="../view/userProfileImg/<%=following.get(i).getFollowing().getUserImage()%>">
+
+
+					<h6><%=following.get(i).getFollowing().getFullName()%></h6></span>
+				<%
+					}
+				%>
+
+
+
+			</div>
 		</div>
-		<div class="col-md-4"></div>
 	</div>
-</div>
-<%
-	}
-%>
-</div>
- 
+
+	<%
+		} else {
+	%>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<img alt="" src="../view/userProfileImg/membership.png">
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<%
+		}
+	%>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
 
 
