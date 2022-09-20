@@ -3,7 +3,9 @@
 <%@page import="java.util.*"%>
 <%@page import="com.webkorps.model.UserPost"%>
 <%@page import="com.webkorps.model.User"%>
-<%@page import="com.webkorps.model.Following"%>
+<%-- <%@page import="com.webkorps.model.Comments"%>
+ --%>
+ <%@page import="com.webkorps.model.Following"%>
 <%@page import="com.webkorps.model.UserFollowers"%>
 <%@page import="com.webkorbs.dto.UserProfileDto"%>
 <!DOCTYPE html>
@@ -31,6 +33,7 @@
 	ArrayList<UserPost> posts = (ArrayList<UserPost>) profile.getGetAllPost();
 	ArrayList<Following> following = (ArrayList<Following>) profile.getUserFollowing();
 	ArrayList<UserFollowers> followers = (ArrayList<UserFollowers>) profile.getUserFollowers();
+	/* ArrayList<Comments> Comments = (ArrayList<Comments>) profile.getComments(); */
 
 	User user = (User) profile.getUser();
 	%>
@@ -47,7 +50,7 @@
 					<!-- <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
  -->
 
-
+                 
 					<img src="../view/userProfileImg/${findByUser.getUserImage()}"
 						style="height: 200px; width: 200px; margin-left: 250px">
 				</div>
@@ -196,11 +199,12 @@
 					for (int i = 0; i < followers.size(); i++) {
 				%>
 
-				<img class="myProfilePicture"
+				<span><img class="myProfilePicture"
 					src="../view/userProfileImg/<%=followers.get(i).getFollower().getUserImage()%>" />
 
 
-				<span><%=followers.get(i).getFollower().getFullName()%></span>
+				<%=followers.get(i).getFollower().getUserName()%>
+				</span>
 
 				<%
 					}
@@ -228,7 +232,7 @@
 	%>
 
 
-	<!--  Followers  Modal -->
+	<!--  Following  Modal -->
 
 
 	<div class="modal fade" id="following" tabindex="-1" role="dialog"
@@ -238,6 +242,7 @@
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabe2">All Followers</h5>
 				</div>
+				
 				<%
 					if (following.size() > 0) {
 					for (int i = 0; i < following.size(); i++) {
@@ -247,12 +252,12 @@
 					src="../view/userProfileImg/<%=following.get(i).getFollowing().getUserImage()%>">
 
 
-					<h6><%=following.get(i).getFollowing().getFullName()%></h6></span>
+					<h6><%=following.get(i).getFollowing().getUserName()%></h6>
 				<%
 					}
 				%>
 
-
+            
 
 			</div>
 		</div>

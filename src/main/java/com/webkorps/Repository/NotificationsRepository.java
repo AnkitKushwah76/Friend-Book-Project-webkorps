@@ -34,4 +34,5 @@ public interface NotificationsRepository extends CrudRepository<Notifications, I
 	
 	
 	
+	
 }

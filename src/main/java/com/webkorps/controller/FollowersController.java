@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +14,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
+
+import com.webkorps.Repository.NotificationsRepository;
 import com.webkorps.model.Notifications;
 import com.webkorps.serviceImpl.NotificationImpl;
 
@@ -20,6 +24,9 @@ public class FollowersController {
 
 	@Autowired
 	private NotificationImpl notificationImpl;
+	
+	@Autowired
+	private NotificationsRepository notificationsRepository;
 
 	// follow request 
 	@GetMapping("/followrequest")
@@ -73,15 +80,25 @@ public class FollowersController {
 		//boolean followBack = this.notificationImpl.followBack((int) session.getAttribute("userId"),userId);
 		//System.out.println("followBack-->"+followBack);
 		
-		if(!this.notificationImpl.followBack((int) session.getAttribute("userId"),userId))
-			//session.setAttribute("followback","followback...");
-		redirecatView.setUrl("checkUserRequest");
+//		if(!this.notificationImpl.followBack((int) session.getAttribute("userId"),userId)) {
+//			//session.setAttribute("followback","followback...");
+//		
+//		}
+		this.notificationImpl.followBack((int) session.getAttribute("userId"),userId);
 		
+		redirecatView.setUrl("checkUserRequest");
 		return redirecatView;
 	}
 	
-	
-	
+	@GetMapping("/declinerequest")
+	@Transactional
+	public RedirectView declinerequest(@RequestParam("userId") int userId,HttpServletRequest request) {
+		RedirectView redirectView =new RedirectView();
+		HttpSession session=request.getSession();
+		notificationsRepository.followBack((int) session.getAttribute("userId"), userId);
+		redirectView.setUrl("checkUserRequest");
+		return redirectView;
+	}
 
 	
 }

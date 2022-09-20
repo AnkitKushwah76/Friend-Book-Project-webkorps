@@ -100,4 +100,16 @@ body{
 
 
 
+#table-underline {
+    border: 1px solid #2baab1;
+    margin-top:12px;
+}
 
+.modules-table > tbody > tr > th ,.modules-table > tbody > tr > td {
+    border-color:#ececef;
+}
+
+.modules-table  > tbody > tr > td:nth-child(2) {
+    width:336px;
+    margin-left:80px !important;
+}

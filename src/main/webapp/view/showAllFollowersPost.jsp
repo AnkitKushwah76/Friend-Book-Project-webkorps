@@ -1,12 +1,15 @@
+<%@page import="com.webkorps.model.Comments"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@include file="/view/Navbar/UserNavbar.jsp"%>
-<%@include file="/view/popup.jsp"%>
+<%@include file="/view/postComments.jsp"%>
 <%@page import="java.util.*"%>
 <%@page import="com.webkorps.model.UserPost"%>
+<%@page import="com.webkorps.model.Comments"%>
 <%@page import="com.webkorps.model.User"%>
 <%@page import="com.webkorps.model.UserFollowers"%>
 <%@page import="com.webkorbs.dto.UserProfileDto"%>
+
 
 <!DOCTYPE html>
 <html>
@@ -33,20 +36,14 @@
 	ArrayList<UserFollowers> userfollowers = (ArrayList<UserFollowers>) userfollowersdto.getUserFollowers();
 	%>
 
-	<h1><%=userfollowersdto.getCountPostLike()%></h1>
 
 	<h1 class="text-center">All Upload Posts</h1>
 
 	<%
 		ArrayList<UserPost> followersposts = (ArrayList<UserPost>) userfollowersdto.getGetAllFollowerPost();
-
-	boolean f = true;
 	if (followersposts.size() > 0) {
 		for (int i = 0; i < followersposts.size(); i++) {
 	%>
-
-
-
 
 	<div class="container mt-5">
 		<div class="row">
@@ -61,94 +58,81 @@
 								<h6><%=followersposts.get(i).getUser().getUserName()%></h6>
 							</samp>
 						</samp>
+
 						<img height="300" width="300"
 							src="../view/PostImage/<%=followersposts.get(i).getImage()%>"
 							class="card-img-top">
+
 						<ul class="list-group list-group-flush">
 							<h6>
 								Description :
 								<%=followersposts.get(i).getDescription()%>
 							</h6>
+
 						</ul>
 						<%
-							/* 							if (followersposts.get(i).getPostlike().isEmpty()) {
-
-						*/ if (followersposts.get(i).getPostlike().isEmpty()) {
+							if (followersposts.get(i).getPostlike().size() > 0) {
 						%>
-						<span><button class="p-1 fa fa-heart-o" style="color: red"
-								onClick="adddislike(<%=followersposts.get(i).getId()%>)"
+						<span><button class="p-1 fa fa-heart" style="color: red"
+								onClick="addislike(<%=followersposts.get(i).getId()%>)"
 								id="like<%=followersposts.get(i).getId()%>"></button></span> <span><%=followersposts.get(i).getPostlike().size()%></span>
 
 						<%
 							} else {
 						%>
 
-						<span><button class="p-1 fa fa-heart" style="color: red"
-								onClick="adddislike(<%=followersposts.get(i).getId()%>)"
+						<span><button class="p-1 fa fa-heart" style="color: black"
+								onClick="addislike(<%=followersposts.get(i).getId()%>)"
 								id="like<%=followersposts.get(i).getId()%>"></button></span> <span><%=followersposts.get(i).getPostlike().size()%></span>
 						<%
 							}
 						%>
+						<a href="#"
+							onClick="addComments(<%=followersposts.get(i).getId()%>)"
+							data-toggle="modal" data-target="#comments" class="item"> <i
+							class="fa-solid fa-comment-dots"></i>
+						</a>
 
-						<a data-toggle="modal" data-target="#comments" class="item">
+						<a href="getComments?postId=<%=followersposts.get(i).getId()%>"
+							> <span>View Comments</span></a> 
+
 						
-						<i class="fa-solid fa-comment-dots"></i></a>
 						
 
-						<%-- <div class="row mt-2">
-								<div class="col-md-2"></div>
-									<div class="col-md-8">
-									<button class="fa fa-comments-o"
-								onClick="adddislike(<%=followersposts.get(i).getId()%>)"
-								id="like<%=followersposts.get(i).getId()%>"></button>
-								
-								
-										<a href="" onClick="getComments()" class="mt-2" data-bs-toggle="modal"
-											data-bs-target="#viewcomments">view comments</a>
-									</div>
-								</div> --%>
+
+						</div>
 					</div>
-
 				</div>
 			</div>
-		</div>
-	</div>
 
-	<%
-		}
-	} else {
-	%>
+			<%
+				}
+			}
 
-	<div class="container mt-5">
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<img alt="" src="../view/userProfileImg/membership.png">
+			else {
+			%>
+
+			<div class="container mt-5">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<img alt="" src="../view/userProfileImg/membership.png">
+					</div>
+					<div class="col-md-4"></div>
+				</div>
 			</div>
-			<div class="col-md-4"></div>
+
+
+			<%
+				}
+			%>
 		</div>
-	</div>
-
-
-	<%
-		}
-	%>
-	</div>
-
-	</div>
-	</div>
 </body>
 </html>
 
-
-
-
-
-</script>
-
 <script>
 var i=0;
-	function adddislike(id){
+	function addislike(id){
 	
 		console.log("ID : "+id)
 		if(i==0){
@@ -183,9 +167,34 @@ var i=0;
 	
 </script>
 
+<script>
+
+	function addComments(postId){
+			console.log("postid--->"+postId)
+			$("#postId").val(postId);
+		}
+	function get(getpostId){
+			console.log("getpostid--->"+getpostId)
+			$.ajax({
+				url:"/getComments?getpostId="+getpostId,
+				method:"post",
+				success : function(result){
+						console.log("success");
+						
+					},
+					error : function(result){
+						console.log("fail");
+						
+					}
+			});
+	
+		}
+	
+</script>
 
 
 
+<script src="/view/js/script.js"></script>
 
 
 

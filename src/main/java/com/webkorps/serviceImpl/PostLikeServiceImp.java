@@ -39,7 +39,7 @@ public class PostLikeServiceImp implements PostLikeService {
 		User user = new User();
 		user.setId(userId1);
 		postLike.setUserId(user);
-		//postLike.setStatus(true);
+		postLike.setStatus(true);
 
 		if (this.alreadycheck(userPost, user) == null) {
 			postLikeRepository.save(postLike);

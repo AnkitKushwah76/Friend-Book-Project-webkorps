@@ -2,8 +2,7 @@ package com.webkorbs.dto;
 
 import java.util.List;
 
-
-
+import com.webkorps.model.Comments;
 import com.webkorps.model.Following;
 import com.webkorps.model.PostLike;
 import com.webkorps.model.User;
@@ -27,12 +26,7 @@ public class UserProfileDto {
 	private List<UserPost>getAllFollowerPost;
 	
 	private int   countPostLike;
-	
-	
-
-	
-
-	public int getCountPostLike() {
+ 	public int getCountPostLike() {
 		return countPostLike;
 	}
 
@@ -112,10 +106,7 @@ public class UserProfileDto {
 				+ ", countPostLike=" + countPostLike + "]";
 	}
 
-	
-	
-
-	
+		
 	
 	
 		

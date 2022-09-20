@@ -19,62 +19,58 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
 	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
 	crossorigin="anonymous"></script>
-	<%@include file="/view/Navbar/UserNavbar.jsp" %>
-	
+<%@include file="/view/Navbar/UserNavbar.jsp"%>
+
 </head>
 <body>
-	
-	
+
+
 	<h1>${searchUserId.getId()}</h1>
-	
-	
+
+
 	<br>
 	<div class="d-flex justify-content-center">
 		<c:if test="${searchUserId.getUserImage() !=null}">
 			<img height="150" width="150" style="border-radius: 100px"
 				src="../view/userProfileImg/${searchUserId.getUserImage() }" />
+				
 		</c:if>
 	</div>
 	<div class="d-flex justify-content-center">
 		<h4>${searchUserId.getUserName()}</h4>
+		
 	</div>
 	<c:if test="${searchUserId.getUserImage()!=null}">
-	<div class="container mt-3">
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-4">
-				   
-					<a href="/followrequest?id=${searchUserId.getId()}"><button value=" " class="btn profile-edit-btn" style= "background-color:#008CBA">Follow</button></a>
-					
-					
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-4">
+
+							<a href="/followrequest?id=${searchUserId.getId()}"><button
+									value=" " class="btn profile-edit-btn"
+									style="background-color: #008CBA">Follow</button></a>
+						</div>
+
 					</div>
-					   
-					   
-				   
-				   
-				   
-					
 				</div>
+				<div class="col-md-4"></div>
 			</div>
-			<div class="col-md-4"></div>
 		</div>
-	</div>
-	<div class="container mt-3">
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-			
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"></div>
 			</div>
-			<div class="col-md-4"></div>
 		</div>
-	</div>
 	</c:if>
 	<div class="d-flex justify-content-center">
 		<c:if test="${searchUserId.getUserImage()==null}">
-			<img height="250" width="250" src="../image/Noresultsfound.jpg" />
+			<img height="250" width="250"
+				src="../view/userProfileImg/membership.png" />
 		</c:if>
 	</div>
 </body>

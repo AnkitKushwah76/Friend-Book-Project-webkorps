@@ -17,14 +17,19 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      
       <div class="modal-body">
-      <form action="">
-       <textarea name="comment" form="usrform"></textarea>
-       <button type="Submit" class="btn btn-primary">Save</button>
+       
+			<form  method="post" action="addComments" autocomplete="off">
+        
+ 		<input type="text" placeholder="Enter Comment" name="comment">
+ 		<input type="text" hidden="true"
+						id="postId" value="" name="postId">
+       <button 	 type="submit"  class="btn btn-primary">Add</button>
        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button  type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         
       </div>
     </div>

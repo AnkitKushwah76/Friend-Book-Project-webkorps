@@ -48,7 +48,28 @@ public class Comments {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+	
+	
 
+	public UserPost getUserPost() {
+		return userPost;
+	}
+
+	public void setUserPost(UserPost userPost) {
+		this.userPost = userPost;
+	}
+
+	@Override
+	public String toString() {
+		return "Comments [id=" + id + ", comment=" + comment + "]";
+	}
+
+	
+
+	
+	
+
+	
 	
 	
 	

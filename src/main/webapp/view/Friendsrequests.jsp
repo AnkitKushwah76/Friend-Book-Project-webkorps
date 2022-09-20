@@ -39,8 +39,7 @@ if (user.size() > 0) {
 					
 						<%
 							if (user.get(i).getAccept() == false) {
-						%><%-- <a
-							href="acceptrequest?userId=<%=user.get(i).getSendUserRequest().getId()%>">    Confirm</a> --%>
+						%>
 						<div class="profile-user-settings">
 
 							<a
@@ -53,28 +52,29 @@ if (user.size() > 0) {
 							}
 						%>
 					
-					<%-- <h6>
+					 <h6>
 						<%
 							if (user.get(i).getAccept() == false) {
-						%><a
-							href="/follower/declinerequest?userId=<%=user.get(i).getSendUserRequest().getId()%>">Decline</a>
+						%>
+						<a
+							href="/declinerequest?userId=<%=user.get(i).getSendUserRequest().getId()%>">Decline</a>
 						<%
 							}
 						%>
-							--%>
+							
 					</h6>
 				
-						<%-- <a
-							href="/follower/followback?userId=<%=user.get(i).getSendUserRequest().getId()%>">Follow
-							Back</a> --%>
+				
 							<br><br>
-							
+							<% if (user.get(i).getAccept() == true) {
+								%>
 				     	<div class="">
 
 							<a
 								href="followbackUser?userId=<%=user.get(i).getSendUserRequest().getId()%>"">
 								<button class="btn profile-edit-btn">FollowBack</button>
 							</a>
+							<% }%>
 						</div>		
 							
 				
@@ -96,7 +96,7 @@ else {
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<img alt="" src="../view/userProfileImg/noresult.png">
+			<img alt="" src="../view/userProfileImg/membership.png">
 		</div>
 		<div class="col-md-4"></div>
 	</div>

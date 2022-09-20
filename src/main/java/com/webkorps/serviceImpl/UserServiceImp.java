@@ -20,9 +20,11 @@ import org.springframework.web.multipart.MultipartFile;
 import com.webkorbs.dto.UserProfileDto;
 import com.webkorbs.service.UserPostService;
 import com.webkorbs.service.UserService;
+import com.webkorps.Repository.PostCommentsRepository;
 import com.webkorps.Repository.UserFollowerRepository;
 //import com.webkorps.Repository.UserProfileRepository;
 import com.webkorps.Repository.UserRepository;
+import com.webkorps.model.Comments;
 import com.webkorps.model.Following;
 import com.webkorps.model.User;
 import com.webkorps.model.UserFollowers;
@@ -42,6 +44,9 @@ public class UserServiceImp implements UserService {
 
 	@Autowired
 	private UserPostService userPostService;
+	
+	@Autowired
+    private PostCommentsServiceImp postCommentsServiceImp;
 
 	// set UserSignup ServiceImp
 	@Override
@@ -102,20 +107,14 @@ public class UserServiceImp implements UserService {
 	public void setUserProfile(User user, String userName, MultipartFile imageFile)
 			throws FileNotFoundException, IOException {
 		String profilePhoto = "";
-		if (imageFile.isEmpty()) {
+		if (imageFile.isEmpty()) 
 			user.setUserImage("No_image.png");
-		}
-		if (user.getFavoriteBooks().isEmpty()) {
+		if (user.getFavoriteBooks().isEmpty()) 
 			user.setFavoriteBooks("Not Found");
-
-		}
-		if (user.getFavoritePlaces().isEmpty()) {
+		if (user.getFavoritePlaces().isEmpty())
 			user.setFavoritePlaces("Not Found");
-
-		}
-		if (user.getFavoriteSongs().isEmpty()) {
+		if (user.getFavoriteSongs().isEmpty()) 
 			user.setFavoriteSongs("Not Found");
-		}
 		if (!imageFile.isEmpty()) {
 			profilePhoto = imageFile.getOriginalFilename().trim();
 
@@ -150,7 +149,6 @@ public class UserServiceImp implements UserService {
 
 		// get all post particular user..
 		List<UserPost> post = this.userPostService.getPost(userId);
-		System.out.println("List--->" + post);
 
 		// count user followers
 		userProfileDto.setGetAllPost(post);
@@ -160,16 +158,14 @@ public class UserServiceImp implements UserService {
 		// count user post
 		userProfileDto.setCountPost(this.userPostService.countPost(userId));
 		List<UserPost> getAllPost = userProfileDto.getGetAllPost();
-		System.out.println("getAllPost-->" + getAllPost);
 
 		// get all following in particular...User..
 		List<Following> allFollwing = followingServiceImpl.getAllFollwing(userId);
-		System.out.println("allFollwing--->" + allFollwing);
 		userProfileDto.setUserFollowing(allFollwing);
 
 		// get all followers in particular User...
 		List<UserFollowers> allFollower = userFollowerServiceImp.getAllFollower(userId);
-		System.out.println("allFollower 7649008047-->" + allFollower);
+		userProfileDto.setUserFollowers(userFollowerServiceImp.getAllFollower(userId));
 
 		// get all post in all followers....
 		List<UserPost> followersPost = new ArrayList<UserPost>();
@@ -178,8 +174,7 @@ public class UserServiceImp implements UserService {
 			followersPost.addAll(this.userPostService.getPost(allFollower.get(i).getFollower().getId()));
 		}
 		userProfileDto.setGetAllFollowerPost(followersPost);
-		System.out.println("post1--->" + followersPost);
-		userProfileDto.setUserFollowers(userFollowerServiceImp.getAllFollower(userId));
+		
 		return userProfileDto;
 	}
 

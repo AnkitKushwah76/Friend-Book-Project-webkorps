@@ -25,7 +25,7 @@ public class PostLike {
 	private UserPost userPost;
 
 	
-	//public boolean status;
+	public boolean status;
 	
 	public int getId() {
 		return id;
@@ -52,18 +52,18 @@ public class PostLike {
 	}
 
 	
-//	public boolean isStatus() {
-//		return status;
-//	}
-//
-//	public void setStatus(boolean status) {
-//		this.status = status;
-//	}
-//
-//	@Override
-//	public String toString() {
-//		return "PostLike [status=" + status + "]";
-//	}
+	public boolean isStatus() {
+	return status;
+}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+	return "PostLike [status=" + status + "]";
+	}
 
 //	@Override
 //	public String toString() {

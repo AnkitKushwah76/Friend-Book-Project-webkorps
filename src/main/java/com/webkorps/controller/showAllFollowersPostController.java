@@ -1,4 +1,4 @@
- package com.webkorps.controller;
+package com.webkorps.controller;
 
 import java.util.List;
 
@@ -27,10 +27,10 @@ public class showAllFollowersPostController {
 
 	@Autowired
 	private UserServiceImp userServiceImp;
-	
+
 	@Autowired
 	private PostLikeServiceImp postLikeServiceImp;
-	
+
 	@Autowired
 	private PostLikeRepository postLikeRepository;
 
@@ -45,30 +45,19 @@ public class showAllFollowersPostController {
 		modelAndView.setViewName("showAllFollowersPost");
 		return modelAndView;
 	}
-	@GetMapping("/temp")
-	public ModelAndView temp() {
-		ModelAndView andView=new ModelAndView();
-		andView.setViewName("ShowUserProfile");
-		System.out.println("temp called");
-		return andView;
-	}
+
 	@ResponseBody
 	@GetMapping("/postLike")
-	public String postLike(@RequestParam("postId") int postId ,HttpServletRequest request) {
-		System.out.println("ankit kushwah--->"+postId);
-		//RedirectView redirectView=new RedirectView();
-		HttpSession session=request.getSession();
-		//UserProfileDto userProfileDto=new UserProfileDto();
-		//PostLike addPostLike = this.postLikeServiceImp.addPostLike(postId, (int)session.getAttribute("userId"));  
-		  //userProfileDto.setCountPostLike(postLikeRepository.countPostLike(postId));
-	  //redirectView.setUrl("showAllFollowersPost");
-   if(this.postLikeServiceImp.addPostLike(postId, (Integer)session.getAttribute("userId")))
-   {
-	 
-	   return "success";
-   }else {
-		return "no";
-	}
+	public String postLike(@RequestParam("postId") int postId, HttpServletRequest request) {
 
-}
+		HttpSession session = request.getSession();
+
+		if (this.postLikeServiceImp.addPostLike(postId, (Integer) session.getAttribute("userId"))) {
+
+			return "success";
+		} else {
+			return "no";
+		}
+
+	}
 }
