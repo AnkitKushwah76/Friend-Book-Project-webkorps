@@ -70,18 +70,24 @@
 							</h6>
 
 						</ul>
+						
+						
 						<%
-							if (followersposts.get(i).getPostlike().size() > 0) {
+							if (followersposts.get(i).getPostlike().isEmpty()) {
 						%>
-						<span><button class="p-1 fa fa-heart" style="color: red"
+						<span><button class="p-1 fa fa-heart" style="color: black"
 								onClick="addislike(<%=followersposts.get(i).getId()%>)"
 								id="like<%=followersposts.get(i).getId()%>"></button></span> <span><%=followersposts.get(i).getPostlike().size()%></span>
 
 						<%
-							} else {
+							}
+						
+							
+							
+							else {
 						%>
 
-						<span><button class="p-1 fa fa-heart" style="color: black"
+						<span><button class="p-1 fa fa-heart" style="color: red"
 								onClick="addislike(<%=followersposts.get(i).getId()%>)"
 								id="like<%=followersposts.get(i).getId()%>"></button></span> <span><%=followersposts.get(i).getPostlike().size()%></span>
 						<%
@@ -93,8 +99,12 @@
 							class="fa-solid fa-comment-dots"></i>
 						</a>
 
-						<a href="getComments?postId=<%=followersposts.get(i).getId()%>"
+						<a href="getComments?postId=<%=followersposts.get(i).getId()%>&check=false"
 							> <span>View Comments</span></a> 
+							
+							
+								
+								
 
 						
 						
@@ -173,6 +183,7 @@ var i=0;
 			console.log("postid--->"+postId)
 			$("#postId").val(postId);
 		}
+	
 	function get(getpostId){
 			console.log("getpostid--->"+getpostId)
 			$.ajax({

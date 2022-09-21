@@ -23,12 +23,7 @@ public class Notifications {
 	
 	private boolean accept;
 	private boolean followBack;
-	@Override
-	public String toString() {
-		return "Follower [id=" + id + ", acceptUser=" + acceptUser + ", sendUserRequest=" + sendUserRequest
-				+ ", accept=" + accept + ", followBack=" + followBack + "]";
-	}
-
+	
 	public boolean getFollowBack() {
 		return followBack;
 	}
@@ -68,6 +63,16 @@ public class Notifications {
 	public void setAccept(boolean accept) {
 		this.accept = accept;
 	}
+
+	@Override
+	public String toString() {
+		return "Notifications [id=" + id + ", acceptUser=" + acceptUser + ", sendUserRequest=" + sendUserRequest
+				+ ", accept=" + accept + ", followBack=" + followBack + "]";
+	}
+
+	
+
+	
 	
 	
 	

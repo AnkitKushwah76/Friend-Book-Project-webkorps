@@ -15,25 +15,23 @@ public class PostCommentsServiceImp implements PostCommentsService{
 
 	@Autowired
 	private PostCommentsRepository postCommentsRepository;
+	
+	
 		public boolean addComment(int userId,int postId,String comment) {
-			 System.out.println("userId-->"+userId);
-			 System.out.println("postId--->"+postId);
-			 System.out.println("comments--->"+comment);
-			 UserPost userPost =new UserPost();
-			 Comments comments=new Comments();
-			 User user =new User();
-			 user.setId(userId);
-			 userPost.setId(postId);
-			 comments.setUser(user);
-			 comments.setUserPost(userPost);
-			 comments.setComment(comment);
-			Comments save = this. postCommentsRepository.save(comments);
-			System.out.println("Comments save-->"+save);
-			if(save!=null)
-			{
-				return true;
-			}
-			return false;
+			  UserPost userPost=new UserPost();
+			  userPost.setId(postId);
+			  System.out.println(userPost.getId());
+			  User user=new User();
+			   user.setId(userId);
+			   System.out.println(user.getId());
+			   Comments comments=new Comments();
+			   comments.setUserPost(userPost);
+			   comments.setUser(user);
+			   comments.setComment(comment);
+			  
+			   this. postCommentsRepository.save(comments);
+			  
+			 return false;
 		}
 		
   public  List<Comments> getallComments(int postId)

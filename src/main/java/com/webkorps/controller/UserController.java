@@ -19,13 +19,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.webkorbs.dto.UserProfileDto;
-import com.webkorbs.service.UserPostService;
 import com.webkorbs.service.UserService;
+import com.webkorps.Repository.NotificationsRepository;
 import com.webkorps.Repository.UserRepository;
+import com.webkorps.model.Notifications;
 import com.webkorps.model.User;
-import com.webkorps.model.UserFollowers;
-import com.webkorps.serviceImpl.UserPostServiceImp;
 import com.webkorps.serviceImpl.UserServiceImp;
 
 @Controller
@@ -37,12 +35,9 @@ public class UserController {
 	private UserRepository userRepository;
 	@Autowired
 	private UserServiceImp userServiceImp;
-
+	
 	@Autowired
-	private UserPostService userPostService;
-
-	@Autowired
-	private UserPostServiceImp userPostServiceImp;
+	private NotificationsRepository notificationsRepository;
 
 	@GetMapping("/")
 	public String home() {
@@ -64,10 +59,7 @@ public class UserController {
 	@PostMapping("/userProfileSet")
 	public String userProfileSet(@ModelAttribute User user, @RequestParam("userImage1") MultipartFile file,
 			HttpSession session) throws FileNotFoundException, IOException {
-		String userEmail = (String) session.getAttribute("userEmail");
-		Integer uerid = (Integer) session.getAttribute("userId");
-
-		this.userService.setUserProfile(user, userEmail, file);
+		this.userService.setUserProfile(user, (String) session.getAttribute("userEmail"), file);
 
 		return "userDashboard";
 	}
@@ -78,17 +70,11 @@ public class UserController {
 	@RequestMapping("/showUserProfile")
 	public ModelAndView showUserProfile(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
+		System.out.println("5455555454545");
 		HttpSession session = request.getSession();
-		Integer id = (Integer) session.getAttribute("userId");
-		Optional<User> findById = this.userRepository.findById(id);
-		User user = findById.get();
-		UserProfileDto userprofileDto = this.userServiceImp.getProfile((int) session.getAttribute("userId"));
-		System.out.println("profile--->anku" + userprofileDto);
-		List<UserFollowers> userFollowers = userprofileDto.getUserFollowers();
-		System.out.println("userFollowers--78787-" + userFollowers);
-
-		modelAndView.addObject("userprofileDto", userprofileDto);
-		modelAndView.addObject("findByUser", user);
+		Optional<User> findById = this.userRepository.findById((Integer) session.getAttribute("userId"));
+		modelAndView.addObject("findByUser", findById.get());
+		modelAndView.addObject("userprofileDto", this.userServiceImp.getProfile((int) session.getAttribute("userId")));
 		modelAndView.setViewName("ShowUserProfile");
 		return modelAndView;
 	}
@@ -97,8 +83,7 @@ public class UserController {
 	@RequestMapping("/updateUserProfile")
 	public ModelAndView ShowUpdateUserProfileForm(HttpSession session) {
 		ModelAndView modelAndView = new ModelAndView();
-		Integer userId = (Integer) session.getAttribute("userId");
-		modelAndView.addObject("findByid", this.userRepository.findByid(userId));
+		modelAndView.addObject("findByid", this.userRepository.findByid((Integer) session.getAttribute("userId")));
 		modelAndView.setViewName("updateUserProfile");
 		return modelAndView;
 
@@ -106,12 +91,10 @@ public class UserController {
 
 	// search user api....
 	@GetMapping("/searchdata")
-	public ModelAndView searchdata(@RequestParam("search") String search) {
+	public ModelAndView searchdata(@RequestParam("search") String search,@RequestParam("userId")int id,HttpSession session) {
 		ModelAndView modelAndView = new ModelAndView();
-		System.out.println("Search -> " + search);
-		User searchUserId = this.userRepository.UserByUserName(search);
-		System.out.println("searchUserId-->" + searchUserId);
-		modelAndView.addObject("searchUserId", searchUserId);
+	   modelAndView.addObject("alreadfollow", this.notificationsRepository.findByUserIdAndAccepted((int)session.getAttribute("userId"),id));
+	   modelAndView.addObject("searchUserId", this.userRepository.UserByUserName(search));
 		modelAndView.setViewName("searchUser");
 		return modelAndView;
 	}
@@ -119,8 +102,7 @@ public class UserController {
 	@ResponseBody
 	@GetMapping("/search")
 	public List<User> getAllUser(@RequestParam("name") String search) {
-		List<User> findByUserNameContains = this.userRepository.findByUserNameContains(search);
-		return findByUserNameContains;
+		return this.userRepository.findByUserNameContains(search);
 	}
 
 	// End Search user

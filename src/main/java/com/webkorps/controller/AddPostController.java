@@ -18,7 +18,8 @@ import com.webkorps.model.UserPost;
 @Controller
 public class AddPostController {
 
-	@Autowired private UserPostService userPostService;
+	@Autowired
+	private UserPostService userPostService;
 
 	@GetMapping("/addpost")
 	public ModelAndView addPost() {
@@ -33,14 +34,11 @@ public class AddPostController {
 			HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		ModelAndView modelAndView = new ModelAndView();
-		UserPost addPost = this.userPostService.addPost(userPost, image, (int) session.getAttribute("userId"));
-		if (addPost != null) {
+		if (this.userPostService.addPost(userPost, image, (int) session.getAttribute("userId")) != null) {
 			modelAndView.addObject("sucessMsg", "Post Add SucessFully.. !!");
 		}
 		modelAndView.setViewName("AddPost");
 		return modelAndView;
 	}
-	
-	
 
 }

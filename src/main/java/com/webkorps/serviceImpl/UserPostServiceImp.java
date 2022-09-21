@@ -1,13 +1,16 @@
 package com.webkorps.serviceImpl;
 
 import java.io.FileOutputStream;
+
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+
 
 import com.webkorbs.service.UserPostService;
 import com.webkorps.Repository.UserPostRepository;
@@ -27,13 +30,13 @@ public class UserPostServiceImp implements UserPostService {
 		String imageName = image.getOriginalFilename();
 		try {
 			InputStream inputStream = image.getInputStream();
-			String path = "D:\\Spring-Boot-Projects\\Friend-Book-Project\\src\\main\\webapp\\view\\PostImage\\"
-					+ imageName;
+			String path = "D:\\Spring-Boot-Projects\\Friend-Book-Project\\src\\main\\webapp\\view\\PostImage\\"+imageName;
 			int bytes = 0;
 			FileOutputStream fileOutputStream = new FileOutputStream(path);
 			while ((bytes = inputStream.read()) != -1)
 				fileOutputStream.write(bytes);
 			fileOutputStream.close();
+			
 			User user=new User();
 			user.setId(userId);
 			userPost.setImage(imageName);
@@ -78,5 +81,5 @@ public class UserPostServiceImp implements UserPostService {
 			
 		
 			
-
+			
 }

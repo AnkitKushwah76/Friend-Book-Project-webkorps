@@ -23,11 +23,6 @@
 
 </head>
 <body>
-
-
-	<h1>${searchUserId.getId()}</h1>
-
-
 	<br>
 	<div class="d-flex justify-content-center">
 		<c:if test="${searchUserId.getUserImage() !=null}">
@@ -47,11 +42,21 @@
 				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-2"></div>
-						<div class="col-md-4">
-
-							<a href="/followrequest?id=${searchUserId.getId()}"><button
+						<div class="col-md-6">
+                      
+                             <c:if test=""></c:if>
+                            <%if(request.getAttribute("alreadfollow")==null){ %>
+                            
+							     <a href="/followrequest?id=${searchUserId.getId()}"><button
 									value=" " class="btn profile-edit-btn"
 									style="background-color: #008CBA">Follow</button></a>
+									<%} 
+									else{
+									%>
+									<h5><a href="/followrequest?id=${searchUserId.getId()}">
+									Decline </a></h5>
+									
+									<%} %>
 						</div>
 
 					</div>

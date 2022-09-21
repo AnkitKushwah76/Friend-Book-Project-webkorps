@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name = "posts")
@@ -29,15 +28,10 @@ public class UserPost {
 
 	@OneToMany(mappedBy = "userPost")
 	private List<PostLike> postlike;
-	
-	
 	@OneToMany(mappedBy = "userPost")
 	private List<Comments> comments;
 	
-	
-	
-
-	public int getId() {
+		public int getId() {
 		return id;
 	}
 

@@ -62,9 +62,10 @@ public class PostLike {
 
 	@Override
 	public String toString() {
-	return "PostLike [status=" + status + "]";
+		return "PostLike [status=" + status + "]";
 	}
 
+	
 //	@Override
 //	public String toString() {
 //		return "PostLike [id=" + id + ", userId=" + userId + ", userPost=" + userPost + ", status=" + status + "]";

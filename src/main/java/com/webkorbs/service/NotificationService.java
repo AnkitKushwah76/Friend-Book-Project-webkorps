@@ -2,11 +2,7 @@ package com.webkorbs.service;
 
 import java.util.List;
 
-
-
 import com.webkorps.model.Notifications;
-
-
 
 public interface NotificationService {
 

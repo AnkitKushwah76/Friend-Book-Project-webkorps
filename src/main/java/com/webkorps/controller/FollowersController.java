@@ -1,14 +1,13 @@
 
 package com.webkorps.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,32 +23,38 @@ public class FollowersController {
 
 	@Autowired
 	private NotificationImpl notificationImpl;
-	
+
 	@Autowired
 	private NotificationsRepository notificationsRepository;
 
-	// follow request 
+	// follow request
+	@Transactional
 	@GetMapping("/followrequest")
-	public ModelAndView SendRequest(@ModelAttribute("id") int userId, HttpServletRequest req) {
+	public ModelAndView SendRequest(@ModelAttribute("id") int userId, HttpServletRequest req,Model model) {
 		ModelAndView modelAndView = new ModelAndView();
-
-		System.out.println("userId  anki--->" + userId);
 		HttpSession session = req.getSession();
-		String status = this.notificationImpl.addRequest(userId, (int) session.getAttribute("userId"));
-		if (status.equals("success"))
-			session.setAttribute("succMsg", "Request Sent To The User...");
+		if (this.notificationsRepository.findByUserIdAndAccepted((int) session.getAttribute("userId"), userId) != null)
+		{
+			notificationsRepository.followBack(userId,(int) session.getAttribute("userId"));
+			session.setAttribute("alreadyfollow", "request cancel successfully..!!");
+			modelAndView.setViewName("userDashboard");
+			return modelAndView;
+			
+		}
+		else { 
+		this.notificationImpl.addRequest(userId, (int) session.getAttribute("userId"));
+		session.setAttribute("succMsg", "Request Sent To The User...");
 		modelAndView.setViewName("userDashboard");
 		return modelAndView;
+		}
 	}
+
 	@GetMapping("/checkUserRequest")
 	public ModelAndView checkRequest(HttpServletRequest req) {
 		ModelAndView modelAndView = new ModelAndView();
 		HttpSession session = req.getSession();
-
 		// get all follow request
-		List<Notifications> requests = this.notificationImpl.getRequest((int) session.getAttribute("userId"));
-		System.out.println("requests--->" + requests);
-		modelAndView.addObject("request", requests);
+		modelAndView.addObject("request", this.notificationImpl.getRequest((int) session.getAttribute("userId")));
 		session.setAttribute("succMsg", req.getAttribute("succMsg"));
 		modelAndView.setViewName("Friendsrequests");
 		return modelAndView;
@@ -60,45 +65,30 @@ public class FollowersController {
 	public RedirectView acceptRequest(@RequestParam("userId") int userId, HttpServletRequest req) {
 		RedirectView rd = new RedirectView();
 		HttpSession session = req.getSession();
-		System.out.println("userId---ankitkushwag>" + userId);
 		if (this.notificationImpl.accept((int) session.getAttribute("userId"), userId) > 0)
 			session.setAttribute("succMsg", "request Accepted..");
 		rd.setUrl("checkUserRequest");
 		return rd;
 	}
-	
 
 	// followback to the user
-	
 	@GetMapping("/followbackUser")
 	public RedirectView followBack(@RequestParam("userId") int userId, HttpServletRequest req) {
 		RedirectView redirecatView = new RedirectView();
 		HttpSession session = req.getSession();
-		System.out.println("anananana-->"+userId);
-		System.out.println("sjdsjdsjddsd--->"+(int) session.getAttribute("userId"));
-		
-		//boolean followBack = this.notificationImpl.followBack((int) session.getAttribute("userId"),userId);
-		//System.out.println("followBack-->"+followBack);
-		
-//		if(!this.notificationImpl.followBack((int) session.getAttribute("userId"),userId)) {
-//			//session.setAttribute("followback","followback...");
-//		
-//		}
-		this.notificationImpl.followBack((int) session.getAttribute("userId"),userId);
-		
+		this.notificationImpl.followBack((int) session.getAttribute("userId"), userId);
 		redirecatView.setUrl("checkUserRequest");
 		return redirecatView;
 	}
-	
+
 	@GetMapping("/declinerequest")
 	@Transactional
-	public RedirectView declinerequest(@RequestParam("userId") int userId,HttpServletRequest request) {
-		RedirectView redirectView =new RedirectView();
-		HttpSession session=request.getSession();
+	public RedirectView declinerequest(@RequestParam("userId") int userId, HttpServletRequest request) {
+		RedirectView redirectView = new RedirectView();
+		HttpSession session = request.getSession();
 		notificationsRepository.followBack((int) session.getAttribute("userId"), userId);
 		redirectView.setUrl("checkUserRequest");
 		return redirectView;
 	}
 
-	
 }

@@ -19,6 +19,18 @@
 		session.removeAttribute("succMsg");
 	}
 	%>
+	
+	<%
+		String cancel = (String) session.getAttribute("alreadyfollow");
+	if (cancel != null) {
+	%>
+	<h4 class="text-center text-sucess">
+		<%=cancel%>
+	</h4>
+	<%
+		session.removeAttribute("alreadyfollow");
+	}
+	%>
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-4"></div>

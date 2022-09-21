@@ -17,7 +17,7 @@ public class Comments {
 	@JoinColumn(name="user")
 	private User user;
 	
-	@ManyToOne
+	@ManyToOne()
 	@JoinColumn(name="userPost")
 	private UserPost userPost;
 
