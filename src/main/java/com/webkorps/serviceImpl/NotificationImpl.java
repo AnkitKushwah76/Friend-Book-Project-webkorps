@@ -83,9 +83,6 @@ public class NotificationImpl implements NotificationService {
 	// followBack...
 	@Transactional
 	public boolean followBack(int acceptedUser, int userId) {
-
-		System.out.println("accceptedUser-->" + acceptedUser);
-		System.out.println("userid--->" + userId);
 		if (this.notificationsRepository.followBack(acceptedUser, userId) > 0) {
 
 			Notifications notification = new Notifications();

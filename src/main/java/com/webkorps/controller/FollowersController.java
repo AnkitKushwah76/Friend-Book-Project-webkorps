@@ -2,6 +2,7 @@
 package com.webkorps.controller;
 
 import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
@@ -15,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.webkorps.Repository.NotificationsRepository;
-import com.webkorps.model.Notifications;
+import com.webkorps.Repository.UserFollowerRepository;
 import com.webkorps.serviceImpl.NotificationImpl;
 
 @Controller
@@ -27,25 +28,27 @@ public class FollowersController {
 	@Autowired
 	private NotificationsRepository notificationsRepository;
 
+	@Autowired
+	private UserFollowerRepository userFollowerRepository;
+
 	// follow request
 	@Transactional
 	@GetMapping("/followrequest")
-	public ModelAndView SendRequest(@ModelAttribute("id") int userId, HttpServletRequest req,Model model) {
+	public ModelAndView SendRequest(@ModelAttribute("id") int userId, HttpServletRequest req, Model model) {
 		ModelAndView modelAndView = new ModelAndView();
 		HttpSession session = req.getSession();
-		if (this.notificationsRepository.findByUserIdAndAccepted((int) session.getAttribute("userId"), userId) != null)
-		{
-			notificationsRepository.followBack(userId,(int) session.getAttribute("userId"));
+		if (this.notificationsRepository.findByUserIdAndAccepted((int) session.getAttribute("userId"),
+				userId) != null) {
+			notificationsRepository.followBack(userId, (int) session.getAttribute("userId"));
 			session.setAttribute("alreadyfollow", "request cancel successfully..!!");
 			modelAndView.setViewName("userDashboard");
 			return modelAndView;
-			
-		}
-		else { 
-		this.notificationImpl.addRequest(userId, (int) session.getAttribute("userId"));
-		session.setAttribute("succMsg", "Request Sent To The User...");
-		modelAndView.setViewName("userDashboard");
-		return modelAndView;
+
+		} else {
+			this.notificationImpl.addRequest(userId, (int) session.getAttribute("userId"));
+			session.setAttribute("succMsg", "Request Sent To The User...");
+			modelAndView.setViewName("userDashboard");
+			return modelAndView;
 		}
 	}
 
@@ -88,6 +91,17 @@ public class FollowersController {
 		HttpSession session = request.getSession();
 		notificationsRepository.followBack((int) session.getAttribute("userId"), userId);
 		redirectView.setUrl("checkUserRequest");
+		return redirectView;
+	}
+
+	@Transactional
+	@GetMapping("/unfollow")
+	public RedirectView unfollow(@RequestParam("unfollowId") int unfollowId, HttpServletRequest request) {
+		RedirectView redirectView = new RedirectView();
+		HttpSession session = request.getSession();
+		this.userFollowerRepository.unfollowUser(unfollowId);
+		this.notificationsRepository.followBack((int) session.getAttribute("userId"), unfollowId);
+		redirectView.setUrl("showUserProfile");
 		return redirectView;
 	}
 

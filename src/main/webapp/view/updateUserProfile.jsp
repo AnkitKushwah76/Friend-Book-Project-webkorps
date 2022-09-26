@@ -37,7 +37,7 @@
                             
                             <div class="form-group">
                                 <label for="password" class="text-info">UserImage</label><br>
-                                <input type="file" name="userImage1" id="password" class="form-control" 	>
+                                <input type="file"  value="${findByid.getUserImage()}" name="userImage1" id="password" class="form-control" 	>
                             </div>
                             
                              <div class="form-group">

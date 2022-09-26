@@ -234,7 +234,9 @@
 							src="../view/userProfileImg/<%=followers.get(i).getFollower().getUserImage()%>" />
 
 
-							<%=followers.get(i).getFollower().getUserName()%> </span>
+							<%=followers.get(i).getFollower().getUserName()%>
+						
+							<a href=" unfollow?unfollowId=<%=followers.get(i).getFollower().getId()%>"> unfollow </span></a>
 
 						<%
 							}

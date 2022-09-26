@@ -33,6 +33,8 @@ public class SignupController {
 
 		if ((boolean) session.getAttribute("captcha_security").equals(captchanam)) {
 			user.setStatus(true);
+			user.setRole("ROLE_USER");
+
 			 this.userService.userSignup(user);
 			modelAndView.addObject("sucessfull", "Registration Sucessfully !!");
 			modelAndView.setViewName("login");

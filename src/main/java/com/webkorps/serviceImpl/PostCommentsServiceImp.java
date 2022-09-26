@@ -29,8 +29,9 @@ public class PostCommentsServiceImp implements PostCommentsService{
 			   comments.setUser(user);
 			   comments.setComment(comment);
 			  
-			   this. postCommentsRepository.save(comments);
-			  
+			  if(this. postCommentsRepository.save(comments)!=null)
+				  return true;
+			  else
 			 return false;
 		}
 		

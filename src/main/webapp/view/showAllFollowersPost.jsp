@@ -70,9 +70,9 @@
 							</h6>
 
 						</ul>
-						
-						
+                       
 						<%
+                        
 							if (followersposts.get(i).getPostlike().isEmpty()) {
 						%>
 						<span><button class="p-1 fa fa-heart" style="color: black"
@@ -81,10 +81,8 @@
 
 						<%
 							}
-						
-							
-							
-							else {
+                        
+						else {
 						%>
 
 						<span><button class="p-1 fa fa-heart" style="color: red"
@@ -97,50 +95,43 @@
 							onClick="addComments(<%=followersposts.get(i).getId()%>)"
 							data-toggle="modal" data-target="#comments" class="item"> <i
 							class="fa-solid fa-comment-dots"></i>
+						</a> <a
+							href="getComments?postId=<%=followersposts.get(i).getId()%>&check=false">
+							<span>View Comments</span>
 						</a>
-
-						<a href="getComments?postId=<%=followersposts.get(i).getId()%>&check=false"
-							> <span>View Comments</span></a> 
-							
-							
-								
-								
-
-						
-						
-
-
-						</div>
 					</div>
 				</div>
 			</div>
-
-			<%
-				}
-			}
-
-			else {
-			%>
-
-			<div class="container mt-5">
-				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4">
-						<img alt="" src="../view/userProfileImg/membership.png">
-					</div>
-					<div class="col-md-4"></div>
-				</div>
-			</div>
-
-
-			<%
-				}
-			%>
 		</div>
+
+		<%
+			}
+		}
+
+		else {
+		%>
+
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<img alt="" src="../view/userProfileImg/membership.png">
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+
+
+		<%
+			}
+		%>
+	</div>
 </body>
 </html>
 
-<script>
+<
+<script type="text/javascript">
+
 var i=0;
 	function addislike(id){
 	
@@ -183,47 +174,10 @@ var i=0;
 			console.log("postid--->"+postId)
 			$("#postId").val(postId);
 		}
-	
-	function get(getpostId){
-			console.log("getpostid--->"+getpostId)
-			$.ajax({
-				url:"/getComments?getpostId="+getpostId,
-				method:"post",
-				success : function(result){
-						console.log("success");
-						
-					},
-					error : function(result){
-						console.log("fail");
-						
-					}
-			});
-	
-		}
-	
+		
 </script>
 
 
 
 <script src="/view/js/script.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

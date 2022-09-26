@@ -34,7 +34,7 @@ if (user.size() > 0) {
 						}
 					%>
 					<div>
-						<label class="text-center text-dark">Name : <%=user.get(i).getSendUserRequest().getUserName()%></label>
+					<h5>Name : <%=user.get(i).getSendUserRequest().getUserName()%></h5>
 					</div>
 					
 						<%
@@ -44,7 +44,7 @@ if (user.size() > 0) {
 
 							<a
 								href="acceptrequest?userId=<%=user.get(i).getSendUserRequest().getId()%>">
-								<button class="btn profile-edit-btn">Confirm</button>
+								<button class="btn profile-edit-btn" >Confirm</button>
 							</a>
 						</div>
 
@@ -57,7 +57,8 @@ if (user.size() > 0) {
 							if (user.get(i).getAccept() == false) {
 						%>
 						<a
-							href="/declinerequest?userId=<%=user.get(i).getSendUserRequest().getId()%>">Decline</a>
+							href="/declinerequest?userId=<%=user.get(i).getSendUserRequest().getId()%>">
+							<button class="btn profile-edit-btn" style=" color: red;">Decline</button></a>
 						<%
 							}
 						%>

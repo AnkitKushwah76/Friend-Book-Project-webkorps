@@ -1,6 +1,7 @@
 package com.webkorps.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.webkorbs.service.UserService;
 import com.webkorps.model.User;
@@ -25,19 +27,23 @@ public class LoginController {
 		return "login";
 	}
 
-	// handler for custom login
-	@PostMapping("/login")
-	public String loginPage(@ModelAttribute User user, Model model, HttpServletRequest request) {
+		@PostMapping("/login")
+	public RedirectView loginPage(@ModelAttribute User user, Model model, HttpServletRequest request) {
 
+		RedirectView redirectView=new RedirectView();
+		HttpSession session=request.getSession();
 		if (userService.userLogin(user, request).equals("first")) {
 			model.addAttribute("sucessfully", "Login SucessFully !! ");
-			return "setUserProfile";
+			redirectView.setUrl("setUserProfile");
 		} else if (userService.userLogin(user, request).equals("second")) {
-			return "userDashboard";
+			redirectView.setUrl("showUserProfile");
+			return redirectView;
 		} else {
-			model.addAttribute("error", "Invalid username and Password");
-			return "login";
+			session.setAttribute("error","Invalid username and Password" );
+			redirectView.setUrl("signin");
+			return redirectView;
 		}
+		return redirectView;
 
 	}
 

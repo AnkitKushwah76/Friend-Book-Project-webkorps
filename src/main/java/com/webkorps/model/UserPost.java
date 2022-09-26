@@ -2,7 +2,6 @@ package com.webkorps.model;
 
 import java.util.List;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 @Entity
 @Table(name = "posts")
 public class UserPost {
@@ -22,6 +22,7 @@ public class UserPost {
 	private String description;
 	private String image;
 
+
 	@ManyToOne
 	@JoinColumn(name = "userId")
 	private User user;
@@ -30,8 +31,8 @@ public class UserPost {
 	private List<PostLike> postlike;
 	@OneToMany(mappedBy = "userPost")
 	private List<Comments> comments;
-	
-		public int getId() {
+
+	public int getId() {
 		return id;
 	}
 
@@ -71,7 +72,6 @@ public class UserPost {
 		this.postlike = postlike;
 	}
 
-	
 	public List<Comments> getComments() {
 		return comments;
 	}
@@ -87,13 +87,7 @@ public class UserPost {
 	}
 
 	
-	
-
-	
-
-	
 
 	
 	
-
 }

@@ -1,4 +1,4 @@
-console.log("this is  script file")
+
 
 const toggleSidebar=()=>{
   if($(".sidebar").is(":visible"))

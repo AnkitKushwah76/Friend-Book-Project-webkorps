@@ -3,6 +3,7 @@ package com.webkorps.Repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -20,4 +21,9 @@ public interface UserFollowerRepository extends CrudRepository<UserFollowers, In
 	// get all followers in particular user....
 	@Query("select uf from UserFollowers uf where uf.user_id=:userId")
 	public List<UserFollowers> findAllFollowers(@Param("userId") int userId);
+   
+	@Modifying
+	@Query(value = "delete from UserFollowers where follower=:follower",nativeQuery = true)
+	public int unfollowUser(@Param("follower") int follower);
+	
 }

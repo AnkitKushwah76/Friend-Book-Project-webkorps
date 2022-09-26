@@ -1,6 +1,7 @@
 package com.webkorps.controller;
 
 import java.io.FileNotFoundException;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -18,11 +19,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.webkorbs.service.UserService;
 import com.webkorps.Repository.NotificationsRepository;
 import com.webkorps.Repository.UserRepository;
-import com.webkorps.model.Notifications;
 import com.webkorps.model.User;
 import com.webkorps.serviceImpl.UserServiceImp;
 
@@ -35,7 +36,7 @@ public class UserController {
 	private UserRepository userRepository;
 	@Autowired
 	private UserServiceImp userServiceImp;
-	
+
 	@Autowired
 	private NotificationsRepository notificationsRepository;
 
@@ -43,10 +44,17 @@ public class UserController {
 	public String home() {
 		return "home";
 	}
-
+     
+	
 	@GetMapping("/userDashboard")
 	public String userDashboard() {
 		return "userDashboard";
+	}
+	
+	@RequestMapping("/setUserProfile")
+	public String setUserProfile()
+	{
+		return "setUserProfile";
 	}
 
 	@RequestMapping("/userPro")
@@ -57,11 +65,13 @@ public class UserController {
 
 	// User Profile Set ..Api
 	@PostMapping("/userProfileSet")
-	public String userProfileSet(@ModelAttribute User user, @RequestParam("userImage1") MultipartFile file,
+	public RedirectView userProfileSet(@ModelAttribute User user, @RequestParam("userImage1") MultipartFile file,
 			HttpSession session) throws FileNotFoundException, IOException {
+		System.out.println("user--->"+user);
+		RedirectView redirectView=new RedirectView();
 		this.userService.setUserProfile(user, (String) session.getAttribute("userEmail"), file);
-
-		return "userDashboard";
+           redirectView.setUrl("showUserProfile");
+		return redirectView;
 	}
 
 	// show UserProfile Api.....
@@ -70,7 +80,6 @@ public class UserController {
 	@RequestMapping("/showUserProfile")
 	public ModelAndView showUserProfile(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
-		System.out.println("5455555454545");
 		HttpSession session = request.getSession();
 		Optional<User> findById = this.userRepository.findById((Integer) session.getAttribute("userId"));
 		modelAndView.addObject("findByUser", findById.get());
@@ -91,10 +100,12 @@ public class UserController {
 
 	// search user api....
 	@GetMapping("/searchdata")
-	public ModelAndView searchdata(@RequestParam("search") String search,@RequestParam("userId")int id,HttpSession session) {
+	public ModelAndView searchdata(@RequestParam("search") String search, @RequestParam("userId") int id,
+			HttpSession session) {
 		ModelAndView modelAndView = new ModelAndView();
-	   modelAndView.addObject("alreadfollow", this.notificationsRepository.findByUserIdAndAccepted((int)session.getAttribute("userId"),id));
-	   modelAndView.addObject("searchUserId", this.userRepository.UserByUserName(search));
+		modelAndView.addObject("alreadfollow",
+				this.notificationsRepository.findByUserIdAndAccepted((int) session.getAttribute("userId"), id));
+		modelAndView.addObject("searchUserId", this.userRepository.UserByUserName(search));
 		modelAndView.setViewName("searchUser");
 		return modelAndView;
 	}

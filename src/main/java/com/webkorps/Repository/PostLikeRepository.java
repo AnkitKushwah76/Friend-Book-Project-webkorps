@@ -19,6 +19,10 @@ public interface PostLikeRepository extends JpaRepository<PostLike, Integer> {
 	@Query(value = "delete from post_like where user_post=:userPost and user_id=:userId",nativeQuery = true)
 	public int dislike(@Param("userPost") UserPost userPost,@Param("userId") int userId);
 	
+			@Modifying
+			@Query(value = "delete from post_like where user_post=:userpost",nativeQuery = true)
+			public int deletelikepost(@Param("userpost") int userpost);
+			
 
 
 }
